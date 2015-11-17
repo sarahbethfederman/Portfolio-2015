@@ -21,8 +21,8 @@ var hbs = exphbs.create({
 	defaultLayout: 'main',
 	extname: '.hbs',
 	helpers: {
-		imageUrl: function(url) {
-			return client.path(url);
+		imageUrl: function(url, options) {
+			return client.path(url).toUrl(options.hash).toString();
 		}
 	}
 });
