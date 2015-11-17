@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahbethfederman/portfolio.git"
+  },
+  "author": "Sarah Federman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahbethfederman/portfolio/issues"
+  },
+  "homepage": "https://github.com/sarahbethfederman/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "imgix-core-js": "^0.2.1"
+  }
+}
