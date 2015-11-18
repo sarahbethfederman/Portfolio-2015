@@ -1,0 +1,89 @@
+{{#if content.backgroundImage}}
+  <div style="background-image: url({{imageUrl content.backgroundImage}})" class="header-image chadder"></div>
+{{else}}
+  <div style="background-image: url({{imageUrl backgroundImage}})" class="header-image chadder"></div>
+{{/if}}
+
+<main class="work">
+  <section class="slide light">
+    <div class="container">
+      <h1 class="main-title">{{title}}</h1>
+      <h2 class="sub-title first">{{subtitle}}</h2>
+      <div class="left-col">
+        {{{content.description}}}
+        {{>tag-cloud}}
+      </div>
+
+      <div class="right-col">
+        {{#if logo}}
+        <img class="logo" src="{{imageUrl logo}}" alt="chadder logo">
+        {{/if}}
+        {{#if liveSite}}
+          <a href="{{liveSite}}" class="button dark" target="_blank">Live Site</a>
+        {{/if}}
+        {{#if repo}}
+          <a href="{{repo}}" class="button dark" target="_blank">Github Repo</a>
+        {{/if}}
+      </div>
+    </div>
+  </section>
+
+  <section class="slide dark">
+
+    <div class="container">
+      <section>
+        <h2>Design Process</h2>
+        <h3 class="sub-title">Initial Iteration</h3>
+        <div class="image-container">
+          <a href="{{imageUrl "chadder/wireframe.jpg"}}" rel="{{slug}}" class="lightbox"><img class="half" src="{{imageUrl "chadder/wireframe.jpg"}}" alt="wireframe" /></a>
+          <a href="{{imageUrl "chadder/mockup1.jpg"}}" rel="{{slug}}" class="lightbox"><img class="half" src="{{imageUrl "chadder/mockup1.jpg"}}" alt="first design" /></a>
+        </div>
+      </section>
+
+      <section>
+          <h3 class="sub-title">Final Iteration</h3>
+          <p class="band">Upon reflection, I decided that I wasn't invoking the emotional response necessary for a security-focused application. With some copy changes and some bolder colors and imagery, I came to a final solution.</p>
+          <div class="image-container">
+            <a href="{{imageUrl "chadder/mockup2.jpg"}}" rel="{{slug}}" class="lightbox"><img class="half" src="{{imageUrl "chadder/mockup2.jpg"}}" alt="final design" /></a>
+            <a href="{{imageUrl "chadder/overlay.jpg"}}" rel="{{slug}}" class="lightbox"><img class="half" src="{{imageUrl "chadder/overlay.jpg"}}" alt="overlay" /></a>
+          </div>
+      </section>
+
+    </div>
+  </section>
+
+  <section class="slide light">
+    <div class="container">
+      <h2>Development Cycle</h2>
+      <h3 class="sub-title">Front-end Development</h3>
+      <p class="band">
+        This was a bit of a sprint, since we only had about a week to prepare in between final exams and leaving for CES.
+        Because of this, I had to nix some of the extra effects I'd intended, like parallax scrolling.
+      </p>
+
+      {{>timeline}}
+
+    </div>{{!--end container--}}
+  </section>
+
+  <section class="slide dark last">
+    <div class="container">
+      <h2>Final Thoughts</h2>
+      {{{content.finalThoughts}}}
+      <div class="buttons">
+        {{#if liveSite}}
+          <a href="{{liveSite}}" class="button white" target="_blank">Live Site</a>
+        {{/if}}
+        {{#if repo}}
+          <a href="{{repo}}" class="button white" target="_blank">Github Repo</a>
+        {{/if}}
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="previous" href="projects/{{prev}}">&lt; &nbsp; Previous Project</a>
+  <a class="next" href="projects/{{next}}">Next Project &nbsp; &gt;</a>
+</footer>   
