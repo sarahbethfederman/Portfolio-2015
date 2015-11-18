@@ -37,32 +37,49 @@ app.get('/chadder', function (req, res) {
 	res.render('chadder');
 });
 
-app.get('/index', function (req, res) {
-	res.render('index');
-});
-
 var indexData = {
 	projects: [
 		{
 			title: "Design Portfolio Development",
 			subtitle: "Custom Wordpress Theme",
 			description: "For a fun freelance project, I developed a custom wordpress theme to house a client's design work.",
-			link: "portfolio-theme"
+			slug: "portfolio-theme",
+			backgroundImage: ""
 		},
 		{
 			title: "Chadder",
 			subtitle: "Website Reboot",
 			description: "I designed and developed a new responsive website for RIT-based startup Chadder.",
-			link: "chadder"
+			slug: "chadder",
+			backgroundImage: ""
 		},
 		{
 			title: "Interactive Particle Playground",
 			subtitle: "HTML5 Canvas Experiment",
 			description: "I developed a musical particle experience using HTML5 canvas and the web audio API",
-			link: "chadder"
+			slug: "particle",
+			backgroundImage: ""
 		},
+		{
+			title: "Gallery-R Reel",
+			subtitle: "Web Installation Experience",
+			description: "I created an HTML5 video immersion interface to display videos with metadata",
+			slug: "vid-reel",
+			backgroundImage: ""
+		},
+		{		
+			title: "News to Live By",
+			subtitle: "Custom Wordpress Theme",
+			description: "I developed a responsive wordpress theme for a news website during my internship at Lookthink",
+			link: "ntlb",
+			backgroundImage: ""
+		}
 	]
 };
+
+app.get('/index', function (req, res) {
+	res.render('index');
+});
 
 app.get('/', function (req, res) {
    res.render('index', indexData);

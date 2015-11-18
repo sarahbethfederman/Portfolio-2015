@@ -23,5 +23,8 @@
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "imgix-core-js": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }
