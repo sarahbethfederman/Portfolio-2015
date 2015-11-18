@@ -9,14 +9,18 @@ var app = express();
 
 var port = process.env.PORT || process.env.NODE_PORT || 3000;
 
-// use compression
+// Use compression
 app.use(compression());
+
+// Set up static assets
 app.use(express.static(path.resolve(__dirname + '../../public')));
 
-// set up imgix
+// Set up imgix
 var client = new ImgixClient("sarahfederman.imgix.net", "UucTkLWkcRgKy2SZMYe5aHHfXo40bB3Q");
 
-// Set up handlebars
+// Set up handlebars (views)
+app.set('views', __dirname + '../../views');
+
 var hbs = exphbs.create({
 	defaultLayout: 'main',
 	extname: '.hbs',
@@ -35,10 +39,33 @@ app.get('/chadder', function (req, res) {
 
 app.get('/index', function (req, res) {
 	res.render('index');
-})
+});
+
+var indexData = {
+	projects: [
+		{
+			title: "Design Portfolio Development",
+			subtitle: "Custom Wordpress Theme",
+			description: "For a fun freelance project, I developed a custom wordpress theme to house a client's design work.",
+			link: "portfolio-theme"
+		},
+		{
+			title: "Chadder",
+			subtitle: "Website Reboot",
+			description: "I designed and developed a new responsive website for RIT-based startup Chadder.",
+			link: "chadder"
+		},
+		{
+			title: "Interactive Particle Playground",
+			subtitle: "HTML5 Canvas Experiment",
+			description: "I developed a musical particle experience using HTML5 canvas and the web audio API",
+			link: "chadder"
+		},
+	]
+};
 
 app.get('/', function (req, res) {
-   res.render('index');
+   res.render('index', indexData);
 });
 
 
