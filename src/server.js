@@ -3,7 +3,7 @@ var exphbs = require('express-handlebars');
 var compression = require('compression');
 var path = require('path');
 var ImgixClient = require('imgix-core-js');
-// TODO: add favicon
+var favicon = require('serve-favicon');
 
 var app = express();
 
@@ -38,7 +38,15 @@ app.get('/chadder', function (req, res) {
 });
 
 var indexData = {
+	about: "Hey! I'm a 4th year creative web developer and New Media Design major at Rochester Institute of Technology. I use cutting-edge technology to design &amp; develop usable applications and interactive experiences. I'm passionate about design &amp; development and I live to learn constantly. My focus is on frontend engineering, but I often hop the fence and work on visual design and UX or do some backend development. I'm currently finishing up my BFA this fall, and then starting a full-time role as a Web Developer at LinkedIn in January. <em>Not currently accepting new clients.</em>",
 	projects: [
+		{
+			title: "New Media Interactive Wall",
+			subtitle: "Kinect Web Experience",
+			description: "For my independent study, I created an interactive video wall to display student work plus a content management web app.",
+			slug: "interactive-wall",
+			backgroundImage: ""
+		},
 		{
 			title: "Design Portfolio Development",
 			subtitle: "Custom Wordpress Theme",
@@ -51,28 +59,28 @@ var indexData = {
 			subtitle: "Website Reboot",
 			description: "I designed and developed a new responsive website for RIT-based startup Chadder.",
 			slug: "chadder",
-			backgroundImage: ""
+			backgroundImage: "mockups/chadder1.jpg"
 		},
 		{
 			title: "Interactive Particle Playground",
 			subtitle: "HTML5 Canvas Experiment",
 			description: "I developed a musical particle experience using HTML5 canvas and the web audio API",
 			slug: "particle",
-			backgroundImage: ""
+			backgroundImage: "mockups/particle3.jpg"
 		},
 		{
 			title: "Gallery-R Reel",
 			subtitle: "Web Installation Experience",
 			description: "I created an HTML5 video immersion interface to display videos with metadata",
 			slug: "vid-reel",
-			backgroundImage: ""
+			backgroundImage: "mockups/vid-reel.jpg"
 		},
 		{		
 			title: "News to Live By",
 			subtitle: "Custom Wordpress Theme",
 			description: "I developed a responsive wordpress theme for a news website during my internship at Lookthink",
 			link: "ntlb",
-			backgroundImage: ""
+			backgroundImage: "mockups/ntlb1.jpg"
 		}
 	]
 };

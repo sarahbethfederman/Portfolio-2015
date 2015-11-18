@@ -10,10 +10,11 @@
       <source src="img/vid-bg-2.ogg" />
     </video>
   </section>
-  <span id="work"></span>
-  {{#each projects}}
 
-  <section class="slide {{slug}}" style="background-image: url({{imageUrl backgroundImage}});">
+  <span id="work"></span>
+
+  {{#each projects}}
+  <section class="slide {{slug}}" style="background-image: url({{imageUrl backgroundImage w=1200 fit=clip}});">
     <div class="container">
       <h3>{{subtitle}}</h3>
       <h2>{{title}}</h2>
@@ -29,7 +30,7 @@
       <img class="avatar" src="http://www.gravatar.com/avatar/148c50692de4bba666cf835cca5aacf3" alt="Sarah Federman">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="-308.6 258.9 30.6 30.6" enable-background="new -308.6 258.9 30.6 30.6"><path d="M-293.2 289.6c8.5 0 15.3-6.9 15.3-15.3 0-8.5-6.9-15.3-15.3-15.3-8.5 0-15.3 6.9-15.3 15.3-.1 8.4 6.8 15.3 15.3 15.3zm5.2-22.7c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5zm3.5 10.3c0 3.6-3.9 6.6-8.8 6.6s-8.8-2.9-8.8-6.5l17.6-.1zm-14-10.3c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/></svg>
       <h3 class="block-label">About Me</h3>
-      <p>Hey! I'm a 4th year creative web developer and New Media Design major at Rochester Institute of Technology. I use cutting-edge technology to design &amp; develop usable applications and interactive experiences. I'm passionate about design &amp; development and I live to learn constantly. My focus is on frontend engineering, but I often hop the fence and work on visual design and UX or do some backend development. I'm currently finishing up my BFA this fall, and then starting a full-time role as a Web Developer at LinkedIn in January. <em>Not currently accepting new clients.</em></p>
+      <p>{{{about}}}</p>
       <ul class="social">
         <li><a href="mailto:sarahbethfederman@gmail.com" target="_blank"><img src="{{imageUrl "email.svg"}}" alt="email"></a></li>
         <li><a href="http://www.linkedin.com/in/sarahfederman" target="_blank"><img src="{{imageUrl "linkedin.svg"}}" alt="linkedin"></a></li>
