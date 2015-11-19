@@ -17,9 +17,7 @@ var data = {
 			],
 			content: {
 				finalThoughts: ""
-			},
-			prev: "ntlb",
-			next: "portfolio-theme"
+			}
 		},
 		"portfolio-theme": {
 			title: "Design Portfolio Development",
@@ -37,9 +35,7 @@ var data = {
 			],
 			content: {
 				finalThoughts: ""
-			},
-			prev: "interactive-wall",
-			next: "chadder"
+			}
 		},
 		"chadder": {
 			title: "Chadder",
@@ -58,12 +54,44 @@ var data = {
 			],
 			content: {
 				description: "<p>Chadder is an RIT-based startup. They created an end-to-end encrypted private messaging mobile application. In need of a site redesign, they approached me with the project.I designed the website for my GUI course project and continued on to develop the site, until I helped officially launch the app at CES 2015 in Las Vegas. Utilizing a responsive approach, the site's main function is to increase app downloads. Currently featured on <a class=\"red\"  href=\"http://www.producthunt.com/posts/chadder\" target=\"_blank\">Product Hunt</a>!</p>",
-				finalThoughts: "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>"
+				finalThoughts: "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>",
+				slides: [
+					{
+						colorScheme: "dark",
+						title: "Design Process",
+						subtitle: "Initial Iteration"
+					},
+					{
+						colorScheme: "light",
+						title: "Development Cycle",
+						subtitle: "Front-end Development",
+						timeline: [
+							{
+								image: "chadder/comp-match.jpg",
+								title: "Comp Matching",
+								description: "I used Adobe Extract to quickly get critical information about colors, dimensions, etc."
+							},
+							{
+								image: "chadder/comp-small.jpg",
+								title: "PX to REMs",
+								description: "All pixel values were converted to rems by use of a sass function, from the Bourbon sass framework"
+							},
+							{
+								image: "chadder/overlay-small.jpg",
+								title: "Modals",
+								description: "With the help of CSS animations and some jQuery, I created custom modals for non-critical information"
+							},
+							{
+								image: "chadder/mobile.jpg",
+								title: "Mobile Responsive",
+								description: "With the help of some media query adjustments, the mobile version came to life"
+							},
+						]
+					}
+				]
 			},
 			liveSite: "http://chadder.im",
-			repo: "https://github.com/sarahbethfederman/Chadder-Redesign",
-			prev: "portfolio-theme",
-			next: "particle"
+			repo: "https://github.com/sarahbethfederman/Chadder-Redesign"
 		},
 		"particle": {
 			title: "Interactive Particle Playground",
@@ -84,9 +112,7 @@ var data = {
 				finalThoughts: "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>",
 			},
 			liveSite: "",
-			repo: "https://github.com/sarahbethfederman/interactive-particle-system",
-			prev: "chadder",
-			next: "vid-reel"
+			repo: "https://github.com/sarahbethfederman/interactive-particle-system"
 		},
 		"vid-reel": {
 			title: "Gallery-R Reel",
@@ -108,15 +134,13 @@ var data = {
 				finalThoughts: "<p>This was a challenging project from both a design perspective and a development perspective and I learned a lot!</p><p>I'd like to work some more on it in the future, and add scrubbing and icons, but also integrate Kinect interactivity so it can be used interactively on a tv or similar setups.</p>"
 			},
 			liveSite: "",
-			repo: "",
-			prev: "particle",
-			next: "ntlb"
+			repo: ""
 		},
 		"ntlb": {		
 			title: "News to Live By",
 			subtitle: "Custom Wordpress Theme",
 			description: "I developed a responsive wordpress theme for a news website during my internship at Lookthink",
-			link: "ntlb",
+			slug: "ntlb",
 			backgroundImage: "mockups/ntlb1.jpg",
 			logo: "ntlb/logo.png",
 			tags: [
@@ -130,11 +154,29 @@ var data = {
 			content: {
 				finalThoughts: "<p>This was an awesome project because it really pushed me. I learned some PHP, learned some Wordpress, and had to utilize some of the command line MySQL I learned in my Database class.</p><p>If I could do it again, I would probably redesign the CSS architecture with more'abstract modules to get rid of some bloat. I would also try and do more traditional wordpress techniques, like taking advantage of 'the loop.'</p>"
 			},
-			liveSite: "http://newstoliveby.net",
-			prev: "vid-reel",
-			next: "interactive-wall"
+			liveSite: "http://newstoliveby.net"
 		}
 	}
 };
+
+(function() {
+	var keys = Object.keys(data.projects);
+	for (var i = 0; i < keys.length; i++) {
+		// first one
+		if (i <= 0) {
+			data.projects[keys[i]].next = keys[i+1];
+			data.projects[keys[i]].prev = keys[keys.length-1];
+		}
+		// last one
+		else if (i >= keys.length-1) {
+			data.projects[keys[i]].next = keys[0];
+			data.projects[keys[i]].prev = keys[i-1];
+		}
+		else {
+			data.projects[keys[i]].next = keys[i+1];
+			data.projects[keys[i]].prev = keys[i-1];
+		}
+	}
+})();
 
 module.exports = data;

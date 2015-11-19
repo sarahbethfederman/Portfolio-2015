@@ -9,6 +9,8 @@ var app = express();
 
 var port = process.env.PORT || process.env.NODE_PORT || 3000;
 
+var env = process.env.NODE_ENV || 'development';
+
 // Use compression
 app.use(compression());
 
@@ -33,7 +35,20 @@ var hbs = exphbs.create({
 			}
 		},
 		host: function() {
-			return 'http://localhost:3000'
+			if (env === 'production') {
+				return 'https://federman-portfolio.herokuapp.com';
+			}
+			return 'http://localhost:3000';
+		},
+		ifCond: function(v1, v2, options) {
+			console.log(v2);
+			if (options.hash['half']) {
+				v2 = (v2-1)/2;
+			}
+		  if(v1 === v2) {
+		    return options.fn(this);
+		  }
+		  return options.inverse(this);
 		}
 	}
 });
