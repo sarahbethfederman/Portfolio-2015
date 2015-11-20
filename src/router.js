@@ -29,13 +29,9 @@ var router = function(app) {
 
 	app.get('/blog', Post.getAllPosts);
 
-	app.post('/blog', function(req, res) {
-		// add new blog post
-	});
+	app.post('/blog', Post.addNewPost);
 
-	app.get('blog/:post', function() {
-		var post = req.params.slug;
-	});
+	app.get('/blog/:slug', Post.getPost);
 
 	app.get('/index', function (req, res) {
 		res.render('index', data);

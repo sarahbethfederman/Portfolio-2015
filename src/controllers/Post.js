@@ -1,16 +1,16 @@
 var Post = require('../models/Post');
 
 var getAllPosts = function(req, res) {
-	Post.find(function(err, posts) {
+	Post.find({}).sort('-date').exec(function(err, results) {
 		if (err) {
 			console.log(err);
 			res.status(400).json({error: err});
 		}
-		res.render('blog', posts);
+		res.render('blog', {posts: results});
 	});
 };
 
-var newPost = function(req, res) {
+var addNewPost = function(req, res) {
 	if (!req.body.title || !req.body.excerpt || !req.body.content) {
 		return res.status(400).json({error: 'Required field missing!'});
 	}
@@ -32,7 +32,12 @@ var newPost = function(req, res) {
 	});
 };
 
-var getPost = function()
+var getPost = function(req, res) {
+	Post.findBySlug(req.params.slug, function(err, post) {
+		res.render('post', post);
+	});
+};
 
-module.exports.newPost = newPost;
+module.exports.addNewPost = addNewPost;
 module.exports.getAllPosts = getAllPosts;
+module.exports.getPost = getPost;
