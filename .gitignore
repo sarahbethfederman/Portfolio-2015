@@ -5,9 +5,9 @@ npm-debug.log
 .DS_Store
 
 # embedded projects
-public/particle
-public/vid-reel
-public/clients
+#public/particle
+#public/vid-reel
+#public/clients
 
 # assets
-public/img
+#public/img

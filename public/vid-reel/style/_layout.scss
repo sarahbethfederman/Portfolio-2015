@@ -1,0 +1,38 @@
+// Main layout styling
+
+.intro-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #000;
+}
+
+.content-container {
+  opacity: 0;
+  float: left;
+  background-color: rgba(0,0,0, .3);
+  padding: 60px;
+  padding-top: 30px;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+}
+
+.video-container {
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+  left: 0;
+  top:0;
+}
+
