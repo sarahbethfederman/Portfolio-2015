@@ -36,18 +36,9 @@ var hbs = exphbs.create({
 		},
 		host: function() {
 			if (env === 'production') {
-				return 'https://federman-portfolio.herokuapp.com';
+				return 'http://sarah.codes';
 			}
 			return 'http://localhost:3000';
-		},
-		ifCond: function(v1, v2, options) { 
-			if (options.hash.half) {
-				v2 = (v2-1)/2;
-			}
-		  if(v1 === v2) {
-		    return options.fn(this);
-		  }
-		  return options.inverse(this);
 		}
 	}
 });

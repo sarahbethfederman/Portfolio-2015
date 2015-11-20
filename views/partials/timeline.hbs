@@ -2,16 +2,16 @@
   <div class="spine"></div>
 
   {{#each timeline}}
-    {{#if @first}}
+{{!--     {{#if @first}}
       <div class="events-container">
-    {{/if}}
-
+    {{/if}} --}}
+{{!-- 
     {{#ifCond @index timeline.length half=true}}
       </div>
       <div class="events-container">
-    {{/ifCond}}
-
+    {{/ifCond}} --}}
       <div class="event">
+        <div class="leg"></div>
         <div class="event-img">
           <img src="{{imageUrl this.image}}" alt="comp matching">
         </div>
@@ -21,9 +21,9 @@
         </div>
       </div>
 
-    {{#if @last}}
-      </div>{{!--end event container--}}
-    {{/if}}
+{{!--     {{#if @last}}
+      </div>end event container
+    {{/if}} --}}
   {{/each}}
 
 </div>{{!-- end timeline--}}

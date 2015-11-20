@@ -53,7 +53,7 @@ gulp.task('watch', function () {
 gulp.task('start', function() {
 	nodemon({
 		script: './src/server.js',
-		ext: 'js hbs html css', // hbs not working?
+		ext: 'js html css', 
 		env: { 'NODE_ENV': 'development'},
 		tasks: function(changedFiles) {
 			var tasks = [];
@@ -68,7 +68,6 @@ gulp.task('start', function() {
 	    return tasks;
 		}
 	})
-	.on('start', ['watch'])
 	.on('restart', function() {
 		console.log('restarted!');
 	});

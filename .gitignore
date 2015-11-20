@@ -7,3 +7,7 @@ npm-debug.log
 # embedded projects
 public/particle
 public/vid-reel
+public/clients
+
+# assets
+public/img

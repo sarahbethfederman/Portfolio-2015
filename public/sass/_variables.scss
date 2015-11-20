@@ -4,5 +4,7 @@ $white: #FFF;
 $blue: lighten(#1AACEB, 5%);
 $grey: #ccc;
 
-$break-1: 1100px;
+$break-1: 800px;
 $break-2: 600px;
+
+$tablet: max-width em(800);
