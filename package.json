@@ -5,7 +5,7 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "develop": "gulp start",
+    "develop": "gulp",
     "pretest": "gulp lint",
     "test": "echo 'tests complete!'"
   },

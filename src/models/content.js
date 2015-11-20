@@ -1,42 +1,43 @@
 var data = {
+	title: "Creative Web Developer",
 	about: "Hey! I'm a 4th year creative web developer and New Media Design major at Rochester Institute of Technology. I use cutting-edge technology to design &amp; develop usable applications and interactive experiences. I'm passionate about design &amp; development and I live to learn constantly. My focus is on frontend engineering, but I often hop the fence and work on visual design and UX or do some backend development. I'm currently finishing up my BFA this fall, and then starting a full-time role as a Web Developer at LinkedIn in January. <em>Not currently accepting new clients.</em>",
 	projects: {
-		"interactive-wall": {
-			title: "New Media Interactive Wall",
-			subtitle: "Kinect Web Experience",
-			description: "For my independent study, I created an interactive video wall to display student work plus a content management web app",
-			slug: "interactive-wall",
-			backgroundImage: "",
-			tags: [
-				"Time: 1 semester",
-				"Node.js",
-				"Express",
-				"Ember JS",
-				"React",
-				"Kinect"
-			],
-			content: {
-				finalThoughts: ""
-			}
-		},
-		"portfolio-theme": {
-			title: "Design Portfolio Development",
-			subtitle: "Custom Wordpress Theme",
-			description: "For a fun freelance project, I developed a custom wordpress theme to house a client's design work",
-			slug: "portfolio-theme",
-			backgroundImage: "",
-			tags: [
-				"Time: 70 hours",
-				"Wordpress",
-				"PHP",
-				"jQuery",
-				"HTML",
-				"SCSS"
-			],
-			content: {
-				finalThoughts: ""
-			}
-		},
+		// "interactive-wall": {
+		// 	title: "New Media Interactive Wall",
+		// 	subtitle: "Kinect Web Experience",
+		// 	description: "For my independent study, I created an interactive video wall to display student work plus a content management web app",
+		// 	slug: "interactive-wall",
+		// 	backgroundImage: "",
+		// 	tags: [
+		// 		"Time: 1 semester",
+		// 		"Node.js",
+		// 		"Express",
+		// 		"Ember JS",
+		// 		"React",
+		// 		"Kinect"
+		// 	],
+		// 	content: {
+		// 		finalThoughts: ""
+		// 	}
+		// },
+		// "portfolio-theme": {
+		// 	title: "Design Portfolio Development",
+		// 	subtitle: "Custom Wordpress Theme",
+		// 	description: "For a fun freelance project, I developed a custom wordpress theme to house a client's design work",
+		// 	slug: "portfolio-theme",
+		// 	backgroundImage: "",
+		// 	tags: [
+		// 		"Time: 70 hours",
+		// 		"Wordpress",
+		// 		"PHP",
+		// 		"jQuery",
+		// 		"HTML",
+		// 		"SCSS"
+		// 	],
+		// 	content: {
+		// 		finalThoughts: ""
+		// 	}
+		// },
 		"chadder": {
 			title: "Chadder",
 			subtitle: "Website Reboot",
@@ -59,7 +60,8 @@ var data = {
 					{
 						colorScheme: "dark",
 						title: "Design Process",
-						subtitle: "Initial Iteration"
+						subtitle: "Initial Iteration",
+						content: ""
 					},
 					{
 						colorScheme: "light",
@@ -152,7 +154,16 @@ var data = {
 				"MySQL"
 			],
 			content: {
-				finalThoughts: "<p>This was an awesome project because it really pushed me. I learned some PHP, learned some Wordpress, and had to utilize some of the command line MySQL I learned in my Database class.</p><p>If I could do it again, I would probably redesign the CSS architecture with more'abstract modules to get rid of some bloat. I would also try and do more traditional wordpress techniques, like taking advantage of 'the loop.'</p>"
+				description: "<p>In 2014, I interned at a small agency called Lookthink in Washington, DC. While I was there, I was asked to make a wordpress site for the first time. I first made a static site, and then converted it to a custom wordpress theme. This meant I had to pick up PHP. As the only intern on a small team, I picked up most of the development workload for this project, and was able to use the other devs as resources when I had questions.</p>",
+				finalThoughts: "<p>This was an awesome project because it really pushed me. I learned some PHP, learned some Wordpress, and had to utilize some of the command line MySQL I learned in my Database class.</p><p>If I could do it again, I would probably redesign the CSS architecture with more'abstract modules to get rid of some bloat. I would also try and do more traditional wordpress techniques, like taking advantage of 'the loop.'</p>", 
+				slides: [
+					{
+						colorScheme: "dark",
+						title: "Client",
+						subtitle: "News To Live By",
+						content: "<p class=\"band\">Our client was a high-traffic news blog with a primarily millenial audience. We had to meet their needs as modern on-the-go readers. We implemented a bolder responsive layout to make reading seamless from any device. A lot of emphasis was on social engagement because that was the driving force behind most traffic.</p>"
+					}
+				]
 			},
 			liveSite: "http://newstoliveby.net"
 		}

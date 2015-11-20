@@ -1,1 +1,0 @@
-var Firebase=require("firebase"),dataLoader={ref:new Firebase("https://gallery-r.firebaseio.com/videos"),vidData:void 0,loadData:function(a){var e=this;e.ref.once("value",function(t){e.vidData=t.val(),a&&a(e.vidData)})},getData:function(a){var e=this;e.vidData?a(e.vidData):e.loadData(a)}};module.exports=dataLoader;

@@ -1,1 +1,0 @@
-"use strict";define(["audio","utils"],function(t,i){var s=function(){function t(t,i,s){this.position=i,this.ctx=t,this.setMass(s),this.size=5}return t.prototype.setMass=function(t){this.mass=t||100,this.drawColor=0>t?"red":"green"},t.prototype.draw=function(){i.drawCircle(this.ctx,this)},t}();return s});

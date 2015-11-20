@@ -12,7 +12,7 @@ var nodemon = require('gulp-nodemon');
 var concat = require('gulp-concat');
 var gulpUtil = require('gulp-util');
 
-var jsFiles = ['./public/js/**/*.js', '!./public/js/global*.js'];
+var jsFiles = ['./public/js/**/*.js', '!./public/js/global*.js']; // ! ignores output files (avoid infinite loop)
 var jsDest = './public/js'; 
 var jsServer = './src/**/*.js';
 var cssFiles = './public/sass/**/*.scss';
@@ -53,20 +53,22 @@ gulp.task('watch', function () {
 gulp.task('start', function() {
 	nodemon({
 		script: './src/server.js',
-		ext: 'js hbs html css',
+		ext: 'js hbs html css', // hbs not working?
 		env: { 'NODE_ENV': 'development'},
 		tasks: function(changedFiles) {
 			var tasks = [];
-			if (path.extname(file) === '.js' && !~tasks.indexOf('lint')) {
-				tasks.push('lint');
-			}
-      if (path.extname(file) === '.scss' && !~tasks.indexOf('styles')) {
-      	tasks.push('styles');
-      }
+			changedFiles.forEach(function (file) {
+				if (path.extname(file) === '.js' && !~tasks.indexOf('lint')) {
+					tasks.push('lint');
+				}
+	      if (path.extname(file) === '.scss' && !~tasks.indexOf('styles')) {
+	      	tasks.push('styles');
+	      }
+	    });
+	    return tasks;
 		}
 	})
 	.on('start', ['watch'])
-	.on('change', ['watch'])
 	.on('restart', function() {
 		console.log('restarted!');
 	});

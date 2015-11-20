@@ -2,3 +2,8 @@ node_modules/
 .wakatime-project
 npm-debug.log
 .sass-cache/
+.DS_Store
+
+# embedded projects
+public/particle
+public/vid-reel
