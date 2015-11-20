@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-var Post = require('../models/Post.js');
 
 var PostSchema = new mongoose.Schema({
 	title: {
