@@ -1,0 +1,24 @@
+<header class="blog-header">
+  <div class="container">
+    <h1>Welcome to my Blog!</h1>
+    <h2>This is a place to reflect on my thoughts and experiences in the realm of design &amp; development.</h2>
+  </div>
+</header>
+
+<div class="container" id="content">
+	{{#each posts}}
+		<div class="post">
+		    <div class="post__content">
+		      <h4>{{this.date}}</h4>
+		      <h2><a href="{{this.slug}}">{{this.title}}</a></h2>
+		      <p class="excerpt">
+		        {{this.excerpt}}
+		      </p>
+		    </div>
+		</div>
+	{{/each}}
+</div>
+
+<div id="footer" style="float: left; margin: 0 auto; width: 100%;">
+  <h4 style="text-align:center; margin: 30px auto;">End of Posts</h4>
+</div>
