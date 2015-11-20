@@ -1,0 +1,166 @@
+.blog {
+  margin-bottom: rem(10);
+  .container {
+    max-width: 90%;
+  }
+  &-header {
+    width: 100%;
+    min-height: rem(200);
+    background-color: $blue;
+    color: #FFF;
+    margin-bottom: rem(35);
+    @include media(max-width $break-1) {
+      margin-bottom: rem(20);
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: rem(5);
+      text-shadow: 0 1px 1px #555;
+      padding-top: rem(55);
+      @extend .animated;
+      @extend .fadeInDown;
+      @include media(max-width $break-1) {
+        font-size: rem(35);
+      }
+    }
+    h2 {
+      font-size: rem(25);
+      font-weight: normal;
+      text-shadow: 0 1px 1px rgba(0,0,0,.3);
+      animation-delay: .4s;
+      @include media(max-width $break-1) {
+        font-size: rem(20);
+      }
+    }
+    .date {
+      padding-top: rem(50);
+    }
+  }
+}
+
+.post {
+  @include span-columns(4);
+  padding: rem(30) rem(25) rem(15) rem(25);
+  background-color: darken(#FFF, 1%);
+  box-shadow: 0px 0px 2px #aaa;
+  margin-top: rem(30);
+  height: 350px;
+  position: relative;
+  @include media(max-width $break-1) {
+    @include span-columns(6);
+    margin-top: rem(20);
+    padding: rem(15) rem(15) rem(15) rem(15);
+  }
+  @include media(max-width $break-1) {
+    @include span-columns(12);
+  }
+  &__content {
+    padding: rem(35);
+    position: absolute;
+    bottom: 0;
+    left:0;
+    @include media(max-width $break-1) {
+      padding: rem(28);
+    }
+  }
+  h2 {
+    font-size: rem(24);
+    text-transform: uppercase;
+    a {
+      color: #333;
+      transition: color .2s linear;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  h4 {
+    font-size: rem(14);
+  }
+  p {
+    margin-bottom: 0;
+  }
+  &:first-child {
+    @include media(max-width $break-1) {
+      margin-top:0;
+    }
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+    @include media(max-width $break-1) {
+      @include span-columns(6);
+    }
+    @include media(max-width $break-2) {
+      @include span-columns(12);
+    }
+  }
+  &:nth-child(2n) {
+    @include media(max-width $break-1) {
+      margin-right: 0;
+    }
+  }
+  .excerpt {
+    overflow: hidden;
+    height: 30%;
+  }
+}
+
+.single-post {
+  background-color: #FFF;
+  p {
+    line-height: 1.8;
+  }
+  .container {
+    max-width: rem(880);
+    a {
+      color: #666;
+    }
+    @include media(max-width $break-1) {
+      padding: rem(30);
+    }
+  }
+  h3 {
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: rem(30);
+    font-size: rem(24);
+  }
+  header h1 {
+    text-transform: uppercase;
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: rem(56);
+    @extend .animated;
+    @extend .fadeInDown;
+  }
+  ol {
+    margin: 0 0 1.5em;
+    padding: 0;
+    padding-left: rem(20);
+    counter-reset: item;
+  }
+  ul > li {
+    text-indent:0;
+  }
+  ol > li {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+    text-indent: -1em;
+    list-style-type: none;
+    counter-increment: item;
+  }
+  ol > li:before {
+    display: inline-block;
+    width: 1em;
+    padding-right: 0.5em;
+    padding-left: rem(2);
+    font-weight: bold;
+    text-align: right;
+    content: counter(item) ".";
+  }
+}
+
+#disqus_thread {
+  margin-top: rem(80);
+}

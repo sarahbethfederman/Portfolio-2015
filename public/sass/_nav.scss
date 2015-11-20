@@ -1,0 +1,254 @@
+#logo {
+  position: absolute;
+  top: rem(20);
+  padding: rem(15);
+  width: 100%;
+}
+
+.mobile-nav {
+  position: fixed;
+  height: rem(50);
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #222;
+  display: none;
+  padding-top: rem(10);
+  padding-left: rem(10);
+  z-index: 200;
+  @include media(max-width $break-1) {
+    display: block;
+  }
+  .trigger {
+    float: left;
+    height: rem(30);
+    width: rem(40);
+  }
+  .nav-logo {
+    float: left;
+    height: rem(30);
+    width: rem(40);
+  }
+}
+
+.nav {
+  &-bar {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: rem(80);
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation-duration: .3s;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    @include media(max-width $break-1) {
+      display: none;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    svg {
+      fill: $white;
+      transition: all .2s linear;
+    }
+  }
+  &__main {
+    li {
+      position: relative;
+      height: rem(60);
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // center the svg within the LI
+        width: 37%;
+        z-index: 5;
+        transition: fill .2s linear .4s;
+      }
+      a {
+        display: block;
+        width: 100%;
+        z-index: 5;
+        height: 100%;
+        padding: 1.25rem;
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          background-color: $blue;
+          z-index: 5;
+          content: '';
+          transition: .2s width ease .345s;
+          width: 0%;
+        }
+      }
+      &:after {
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        left: 100%;
+        width: 0%;
+        height: 100%;
+        padding: .9rem 0 0 0;
+        font-size: rem(20);
+        background-color: $blue;
+        color: $blue;
+        text-align: center;
+        transition: width .3s cubic-bezier(.165, .84, .44, 1), opacity .3s linear, padding .2s linear, color .6s linear;
+        z-index: -1;
+        margin: auto;
+        content: attr(data-tooltip);
+        overflow: hidden;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+      &:before {
+        content: '';
+        display: block;
+        background-color: #0D5675;
+        position: absolute;
+        top: 5px;
+        z-index: 5;
+        right: -10%;
+        width: 0%;
+        height: 100%;
+        transform: skewY(-45deg);
+        transition: .05s width ease .3s;
+      }
+      &:hover {
+        svg {
+          fill: $black;
+          transition: fill .2s linear;
+        }
+        a {
+          &:before {
+            width: 110%;
+            transition: .2s width ease;
+          }
+        }
+        &:after {
+          width: 210%;
+          opacity: 1;
+          padding: .9rem 1rem 0 2rem;
+          color: #333;
+          transition: width .3s cubic-bezier(.165, .84, .44, 1) .25s, opacity .3s linear .25s, padding .2s linear .25s, color .6s linear .25s;
+        }
+        &:before {
+          width: 10%;
+          transition: width .09s ease .22s;
+        }
+      }
+      &:last-child {
+        position: absolute;
+        bottom: rem(30);
+        left: 0;
+        width:100%;
+      }
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(93%);
+    transition: transform .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 8;
+    &:hover {
+      transform: translateY(0);
+      .expand {
+        transform: rotate(180deg);  // flip the arrow
+        order: 99;
+        &__label {
+           display: none;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      margin: 0;
+    }
+    li {
+      position: relative;
+      height: 100%;
+      opacity: 1;
+      cursor: pointer;
+      transition: background-color .3s ease-out;
+      overflow: hidden;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // center the svg within the LI
+        width: 40%;
+        height: 40%;
+        transition: all .2s linear;
+      }
+      &:nth-child(1n) {
+        background-color: #222; // arrow
+      }
+      &:nth-child(2n) {
+        background-color: #0976b4;  // linkedin
+      }
+      &:nth-child(3n) {
+        background-color: #55acee;  // twitter
+      }
+      &:nth-child(4n) {
+        background-color: #f93; // github
+      }
+      &:nth-child(5n) {
+        background-color: #6ebc6c;  // treehouse
+      }
+      &:nth-child(6n) {
+        background-color: #ea4c89;  // dribbble
+      }
+
+      &.expand {  // expansion arrow
+        max-height: 7%;
+        cursor: pointer;
+        transition: background-color .2s ease-out, opacity .2s ease-out;
+        &:hover {
+          background-color: #000;
+          svg {
+            fill: $grey;
+            opacity: 1;
+          }
+        }
+        svg {
+          opacity: .6;
+          width: 30%;
+        }
+      }
+
+      &:hover {
+        background-color: $black;
+        svg {
+          transform-origin: center;
+          transform: scale(1.3) translate(-38.5%, -38.5%);
+        }
+      }
+    }
+    // Expanded Nav modifier
+    &.expanded {
+      transform: translateY(0);
+      .expand {
+        transform: rotate(180deg);  // flip the arrow
+        order: 99;
+      }
+    }
+  }
+}

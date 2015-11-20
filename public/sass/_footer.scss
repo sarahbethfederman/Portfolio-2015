@@ -1,0 +1,35 @@
+footer {
+  height: rem(100);
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+  text-align: center;
+  font-size: rem(20);
+  background: #222;
+  color: rgba(255,255,255,.6);
+  padding: 0;
+  @include media(max-width $break-1) {
+    margin-left:0;
+    width: 100%;
+  }
+  a {
+    color: rgba(255,255,255,.8);
+    float: left;
+    margin:0;
+    padding: rem(40) rem(40);
+    transition: background-color .2s linear;
+  }
+  .next, .previous {
+    width: 50%;
+    height: 100%;
+    &:hover {
+      background-color: lighten(#222, 10%);
+    }
+  }
+  .previous {
+    border-right: 1px solid #555;
+    text-align: right;
+  }
+  .next {
+    text-align: left;
+  }
+}

@@ -5,7 +5,8 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "pretest": "gulp jshint",
+    "develop": "gulp start",
+    "pretest": "gulp lint",
     "test": "echo 'tests complete!'"
   },
   "repository": {
@@ -28,9 +29,12 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.0",
-    "gulp-sass": "^2.1.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.5",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
     "jshint": "^2.8.0"

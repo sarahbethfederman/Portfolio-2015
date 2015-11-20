@@ -1,0 +1,13 @@
+.tag-cloud {
+  margin-top: rem(30);
+  margin-bottom: rem(30);
+  height: auto;
+  span {
+    border: 1px solid #999;
+    color: #777;
+    border-radius: 4px;
+    padding: rem(6);
+    margin-right: rem(10);
+    font-size: rem(14);
+  }
+}

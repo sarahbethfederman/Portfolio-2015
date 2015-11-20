@@ -1,25 +1,76 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps'); // TODO: add sourcemaps
-var jshint = require('gulp-jshint');
+'use strict';
 
-gulp.task('jshint', function() {
-  gulp.src('./src/**/*.js')
+var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
+var path = require('path');
+var sourcemaps = require('gulp-sourcemaps'); 
+var autoprefixer = require('gulp-autoprefixer');
+var jshint = require('gulp-jshint');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var nodemon = require('gulp-nodemon');
+var concat = require('gulp-concat');
+var gulpUtil = require('gulp-util');
+
+var jsFiles = ['./public/js/**/*.js', '!./public/js/global*.js'];
+var jsDest = './public/js'; 
+var jsServer = './src/**/*.js';
+var cssFiles = './public/sass/**/*.scss';
+
+gulp.task('lint', function() {
+  gulp.src(jsServer)
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('sass', function() {
-	gulp.src('./public/sass/**/*.scss')
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(gulp.dest('./public'));
+gulp.task('styles', function() {
+	sass('./public/sass/style.scss', {sourcemap: true, style: 'compressed'})
+	.pipe(autoprefixer("last 2 versions"))
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest('./public'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./public/sass/**/*.scss', ['sass']);
+// Concat and uglify all public scripts
+gulp.task('scripts', function() {
+	return gulp.src(jsFiles)
+		.pipe(concat('global.js'))
+		.pipe(rename('global.min.js'))
+		.pipe(uglify().on('error', gulpUtil.log))
+		.pipe(gulp.dest(jsDest));
 });
 
-gulp.task('default', function() {
-  // place code for your default task here
+// watch for changes
+gulp.task('watch', function () {
+	// lint node files
+	gulp.watch(jsServer, ['lint']);
+	// concat/uglify public js
+	gulp.watch(jsFiles, ['scripts']);
+	// watch sass files
+	gulp.watch(cssFiles, ['styles'])
 });
+
+// restart server on changes
+gulp.task('start', function() {
+	nodemon({
+		script: './src/server.js',
+		ext: 'js hbs html css',
+		env: { 'NODE_ENV': 'development'},
+		tasks: function(changedFiles) {
+			var tasks = [];
+			if (path.extname(file) === '.js' && !~tasks.indexOf('lint')) {
+				tasks.push('lint');
+			}
+      if (path.extname(file) === '.scss' && !~tasks.indexOf('styles')) {
+      	tasks.push('styles');
+      }
+		}
+	})
+	.on('start', ['watch'])
+	.on('change', ['watch'])
+	.on('restart', function() {
+		console.log('restarted!');
+	});
+});
+
+gulp.task('default', ['start']);
 

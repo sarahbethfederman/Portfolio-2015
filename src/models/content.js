@@ -4,7 +4,7 @@ var data = {
 		"interactive-wall": {
 			title: "New Media Interactive Wall",
 			subtitle: "Kinect Web Experience",
-			description: "For my independent study, I created an interactive video wall to display student work plus a content management web app.",
+			description: "For my independent study, I created an interactive video wall to display student work plus a content management web app",
 			slug: "interactive-wall",
 			backgroundImage: "",
 			tags: [
@@ -22,7 +22,7 @@ var data = {
 		"portfolio-theme": {
 			title: "Design Portfolio Development",
 			subtitle: "Custom Wordpress Theme",
-			description: "For a fun freelance project, I developed a custom wordpress theme to house a client's design work.",
+			description: "For a fun freelance project, I developed a custom wordpress theme to house a client's design work",
 			slug: "portfolio-theme",
 			backgroundImage: "",
 			tags: [
@@ -40,7 +40,7 @@ var data = {
 		"chadder": {
 			title: "Chadder",
 			subtitle: "Website Reboot",
-			description: "I designed and developed a new responsive website for RIT-based startup Chadder.",
+			description: "I designed and developed a new responsive website for RIT-based startup Chadder",
 			slug: "chadder",
 			backgroundImage: "mockups/chadder1.jpg",
 			logo: "chadder/logo.svg",
@@ -159,9 +159,11 @@ var data = {
 	}
 };
 
+
+// add next/prev references
 (function() {
 	var keys = Object.keys(data.projects);
-	for (var i = 0; i < keys.length; i++) {
+	for (var i = 0; i < keys.length; i++) { 
 		// first one
 		if (i <= 0) {
 			data.projects[keys[i]].next = keys[i+1];

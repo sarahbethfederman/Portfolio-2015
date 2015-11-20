@@ -30,16 +30,16 @@
         url: url,
         dataType: 'json',
         success: function(data) {
-          console.log(data);
+          //console.log(data);
         }
       });
-    },
+    }, 
     'blog': function(url) {
       $.ajax({
         url: url,
         dataType: 'json',
         success: function(data) {
-          console.log(data.responseData.feed);
+          //console.log(data.responseData.feed);
         }
       });
     },
@@ -48,24 +48,23 @@
         url: url,
         dataType: 'json',
         success: function(data) {
-          console.log(data);
+          //console.log(data);
         }
-      });
+      }); 
     }
   }
-
+ 
   function getWPpost(url, $blogBox) {
-    console.log("blog");
     $.ajax({
       url: url,
       dataType: 'json',
       success: function(data) {
         $blogBox.find('h2').html('<a href="' + data.posts[0].URL + '">' + data.posts[0].title + '</a>');
         $blogBox.find('p').html(data.posts[0].excerpt);
-        console.log(data);
+        //console.log(data);
       },
-      error: function(err) {
-        console.log(err);
+      error: function(err) { 
+        //console.log(err);
       }
     });
   }

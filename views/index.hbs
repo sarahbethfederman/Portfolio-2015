@@ -12,9 +12,9 @@
   </section>
 
   <span id="work"></span>
-
+ 
   {{#each projects}}
-  <section class="slide {{slug}}" style="background-image: url({{imageUrl backgroundImage w=1200 fit=clip}});">
+  <section class="slide {{slug}}" data-href="projects/{{slug}}" style="background-image: url({{imageUrl backgroundImage w=1200 fit=clip}});">
     <div class="container">
       <h3>{{subtitle}}</h3>
       <h2>{{title}}</h2>

@@ -1,0 +1,34 @@
+.button {
+  border-radius: 5px;
+  padding: rem(8) rem(20);
+  border: 1px solid #FFF;
+  font-weight: 700;
+  font-size: rem(14);
+  margin-top: rem(20);
+  display: inline-block;
+  transition: all .2s linear;
+  &:hover {
+    background-color: #FFF;
+    color: #333;
+    text-shadow: none;
+  }
+  &.dark {
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #333;
+  }
+}
+.buttons {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(40);
+  .button {
+    width: rem(200);
+    padding: rem(10);
+    margin-right: rem(30);
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
