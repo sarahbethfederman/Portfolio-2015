@@ -5,7 +5,7 @@ MVC Portfolio project
 `npm install`
 
 ## Run Development Environment
-`gulp develop`
+`gulp`
 
 ## Test
 `npm test`
