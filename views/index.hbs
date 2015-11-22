@@ -1,8 +1,8 @@
  <main>
   <section id="top" class="slide">
     <header class="container">
-      <h1 class="main-title">Hi, I'm Sarah Federman</h1>
-      <h2 class="sub-title">I'm a creative web developer</h2>
+      <h1 class="main-title">Hi, I'm {{name}}</h1>
+      <h2 class="sub-title">I'm a {{toLower title}}</h2>
     </header>
 
     <video preload="auto" autoplay loop>
@@ -26,17 +26,14 @@
 
   <section id="about" class="slide grid">
     <div class="top text block">
-      <img class="avatar" src="http://www.gravatar.com/avatar/148c50692de4bba666cf835cca5aacf3" alt="Sarah Federman">
+      <img class="avatar" src="{{profilePic}}" alt="{{name}}">
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="-308.6 258.9 30.6 30.6" enable-background="new -308.6 258.9 30.6 30.6"><path d="M-293.2 289.6c8.5 0 15.3-6.9 15.3-15.3 0-8.5-6.9-15.3-15.3-15.3-8.5 0-15.3 6.9-15.3 15.3-.1 8.4 6.8 15.3 15.3 15.3zm5.2-22.7c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5zm3.5 10.3c0 3.6-3.9 6.6-8.8 6.6s-8.8-2.9-8.8-6.5l17.6-.1zm-14-10.3c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/></svg>
       <h3 class="block-label">About Me</h3>
       <p>{{{about}}}</p>
       <ul class="social">
-        <li><a href="mailto:sarahbethfederman@gmail.com" target="_blank"><img src="{{imageUrl "email.svg"}}" alt="email"></a></li>
-        <li><a href="http://www.linkedin.com/in/sarahfederman" target="_blank"><img src="{{imageUrl "linkedin.svg"}}" alt="linkedin"></a></li>
-        <li><a href="http://www.github.com/sarahbethfederman" target="_blank"><img src="{{imageUrl "github.svg"}}" alt="github"></a></li>
-        <li><a href="http://www.teamtreehouse.com/sarahfederman" target="_blank"><img src="{{imageUrl "treehouse.svg"}}" alt="treehouse"></a></li>
-        <li><a href="http://www.twitter.com/sarah_federman" target="_blank"><img src="{{imageUrl "twitter.svg"}}" alt="twitter"></a></li>
-        <li><a href="http://www.dribbble.com/sarah_federman" target="_blank"><img src="{{imageUrl "dribbble.svg"}}" alt="dribbble"></a></li>
+        {{#each social}}    
+        <li><a href="{{url}}" target="_blank"><img src="{{imageUrl image}}" alt="{{name}}"></a></li>
+        {{/each}}
       </ul>
     </div>
   </section>

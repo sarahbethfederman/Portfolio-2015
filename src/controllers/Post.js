@@ -10,7 +10,7 @@ var getAllPosts = function(req, res) {
 	});
 };
 
-var addNewPost = function(req, res) {
+var addPost = function(req, res) {
 	if (!req.body.title || !req.body.excerpt || !req.body.content) {
 		return res.status(400).json({error: 'Required field missing!'});
 	}
@@ -38,6 +38,6 @@ var getPost = function(req, res) {
 	});
 };
 
-module.exports.addNewPost = addNewPost;
+module.exports.addPost = addPost;
 module.exports.getAllPosts = getAllPosts;
 module.exports.getPost = getPost;

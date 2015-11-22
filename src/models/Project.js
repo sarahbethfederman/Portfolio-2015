@@ -9,7 +9,7 @@ var SlideSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		trim: true
-	}
+	},
 	subtitle: {
 		type: String,
 		trim: true
@@ -26,7 +26,7 @@ var SlideSchema = new mongoose.Schema({
 			},
 			title: {
 				type: String,
-				required: true
+				required: true,
 				trim: true
 			},
 			description: {
@@ -40,16 +40,14 @@ var SlideSchema = new mongoose.Schema({
 var ContentSchema = new mongoose.Schema({
 	backgroundImage: {
 		type: String
-	}
+	},
 	description: {
 		type: String,
 		required: true
 	},
-	liveSite: {
-		type: String
-	},
-	repo: {
-		type: String
+	finalThoughts: {
+		type: String,
+		required: true
 	},
 	slides: [SlideSchema]
 });
@@ -64,7 +62,7 @@ var ProjectSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		trim: true
-	}
+	},
 	description: {
 		type: String,
 		required: true
@@ -73,6 +71,10 @@ var ProjectSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		match: /^\S*$/		// no spaces allowed
+ 	},
+ 	order: {
+ 		type: Number,
+ 		default: 0
  	},
 	backgroundImage: {
 		type: String,
@@ -84,6 +86,12 @@ var ProjectSchema = new mongoose.Schema({
 	tags: {
 		type: [String]
 	}, 
+	liveSite: {
+		type: String
+	},
+	repo: {
+		type: String
+	},
 	content: ContentSchema
 });
 

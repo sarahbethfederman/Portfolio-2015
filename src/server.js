@@ -53,6 +53,7 @@ var hbs = exphbs.create({
 			return 'http://localhost:3000';
 		},
 		debug: function(optionalValue) {
+			// Debug helper
 		  console.log("Current Context");
 		  console.log("====================");
 		  console.log(this);
@@ -63,7 +64,12 @@ var hbs = exphbs.create({
 		    console.log(optionalValue);
 		  }
 		}, 
+		toLower: function(val) {
+			// transform value to lowercase
+			return val.toString().toLowerCase();
+		},
 		formatDate: function(timestamp) {
+			// Return a formatted timestamp (from JS Date objects in DB)
 			var date = new Date(timestamp);
 
 			var monthNames = [

@@ -52,8 +52,8 @@ gulp.task('watch', function () {
 // restart server on changes
 gulp.task('start', function() {
 	nodemon({
-		script: './src/server.js',
-		ext: 'js html css', 
+		script: 'src/server.js',
+		ext: 'js hbs css', 
 		env: { 'NODE_ENV': 'development'},
 		tasks: function(changedFiles) {
 			var tasks = [];
