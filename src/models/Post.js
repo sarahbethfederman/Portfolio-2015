@@ -18,7 +18,7 @@ var PostSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now
 	}, 
-	content: {
+	content: {	// TO DO: SANTIZE THIS STUPID
 		type: String,
 		required: true
 	}

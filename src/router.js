@@ -1,5 +1,6 @@
 var Post = require('./controllers/Post.js');
 var data = require('./content.json');
+var mainContent = require('./main.json');
 
 var router = function(app) {
 	app.get('/projects/:slug', function(req, res, next) {
@@ -34,7 +35,7 @@ var router = function(app) {
 	app.get('/blog/:slug', Post.getPost);
 
 	app.get('/index', function (req, res) {
-		res.render('index', data);
+		res.render('index', mainContent);
 	});
 
 	app.get('/', function (req, res) {
