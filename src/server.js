@@ -21,6 +21,9 @@ var db = mongoose.connect(dbURL, function(err) {
 var port = process.env.PORT || process.env.NODE_PORT || 3000;
 var env = process.env.NODE_ENV || 'development';
 
+// Set up favicon
+//app.use(favicon(__dirname + '/../public/img/favicon.png'));
+
 // Use compression
 app.use(compression());
 
@@ -29,9 +32,6 @@ app.use(express.static(path.resolve(__dirname + '../../public')));
 
 // Set up imgix
 var client = new ImgixClient("sarahfederman.imgix.net", "UucTkLWkcRgKy2SZMYe5aHHfXo40bB3Q"); 
-
-// Set up favicon
-app.use(favicon(path.resolve(__dirname + '/../public/img/favicon.png')));
 
 // Set up handlebars (views)
 app.set('views', __dirname + '../../views');
