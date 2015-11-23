@@ -30,6 +30,9 @@ app.use(express.static(path.resolve(__dirname + '../../public')));
 // Set up imgix
 var client = new ImgixClient("sarahfederman.imgix.net", "UucTkLWkcRgKy2SZMYe5aHHfXo40bB3Q"); 
 
+// Set up favicon
+app.use(favicon(path.resolve(__dirname + '/../public/img/favicon.png')));
+
 // Set up handlebars (views)
 app.set('views', __dirname + '../../views');
 

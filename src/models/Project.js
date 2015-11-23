@@ -74,7 +74,8 @@ var ProjectSchema = new mongoose.Schema({
  	},
  	order: {
  		type: Number,
- 		default: 0
+ 		default: 0,
+ 		min: 0
  	},
 	backgroundImage: {
 		type: String,
@@ -92,10 +93,24 @@ var ProjectSchema = new mongoose.Schema({
 	repo: {
 		type: String
 	},
+	next: {
+		type: String,
+		match: /^\S*$/
+	},
+	prev: {
+		type: String,
+		match: /^\S*$/
+	},
 	content: ContentSchema
 });
 
-// TO DO: Add NEXT / PREV references
+ProjectSchema.methods.getPrev = function(callback) {
+	return this.model('Project').find({order: this.order - 1}).select('slug').exec(callback);
+};
+
+ProjectSchema.methods.getNext = function(callback) {
+	return this.model('Project').find({order: this.order + 1}).select('slug').exec(callback);
+};
 
 ProjectSchema.static('findBySlug', function(slug, callback) {
 	return this.findOne({slug: slug}, callback);
