@@ -104,14 +104,6 @@ var ProjectSchema = new mongoose.Schema({
 	content: ContentSchema
 });
 
-ProjectSchema.methods.getPrev = function(callback) {
-	return this.model('Project').find({order: this.order - 1}).select('slug').exec(callback);
-};
-
-ProjectSchema.methods.getNext = function(callback) {
-	return this.model('Project').find({order: this.order + 1}).select('slug').exec(callback);
-};
-
 ProjectSchema.static('findBySlug', function(slug, callback) {
 	return this.findOne({slug: slug}, callback);
 });

@@ -19,7 +19,6 @@ var getAllProjects = function(req, res, mainContent) {
 };
 
 var getProject = function(req, res) {
-	// THIS CODE IS SO GROSS EW
 	var composeRefs = async.compose(getNext, getPrev);
 
 	Project.findBySlug(req.params.slug, function(err, project) {
