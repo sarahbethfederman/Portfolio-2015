@@ -75,7 +75,42 @@
     "content": {
       "backgroundImage": "mockups/particle.png",
       "description": "<p>For my Rich Media Web Application Development I class, our first project was a HTML5 canvas project. I chose to create a experimental experience using particle systems and the web audio API. This was a chance for me to get into the nitty gritty of object-oriented javascript and prototypal inheritance.</p>",
-      "finalThoughts": "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>"
+      "finalThoughts": "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>",
+      "slides": [
+        {
+          "colorScheme": "dark",
+          "title": "Concept",
+          "content": "<p class=\"band\">Create a galaxy of particles that react to field effectors, and the frequency of an audio sample. Allow the user to interact with the environment and experiment on their own.</p>"
+        },
+        {
+          "colorScheme": "light",
+          "title": "Development Cycle",
+          "subtitle": "Javascript Development",
+          "content": "<p class=\"band\">There's a lot more I wish I could have done with the user experience, but I learned a ton about the technology involved in the project and it was a really great exercise in rapid learning.</p>",
+          "timeline": [
+            {
+              "image": "particle/require.png",
+              "title": "RequireJS",
+              "description": "I used requireJS for module dependency management, which was my first experience with AMD"
+            },
+            {
+              "image": "particle/js.png",
+              "title": "Object-Oriented Javascript",
+              "description": "The program is structured in pieces, some of which follow the Singleton pattern, others the Module pattern"
+            },
+            {
+              "image": "particle/audio.jpg",
+              "title": "Web Audio API",
+              "description": "The attraction of the fields is dependent on the average frequency of the music"
+            },
+            {
+              "image": "particle/particle.jpg",
+              "title": "Interactive Elements",
+              "description": "Users can create new Fields and Emitters to adjust the output of the particles"
+            }
+          ]
+        }
+      ]
     },
     "liveSite": "",
     "repo": "https://github.com/sarahbethfederman/interactive-particle-system"
@@ -98,10 +133,46 @@
     "content": {
       "backgroundImage": "mockups/vid-reel1.jpg",
       "description": "<p>The Gallery R exhibit is a visual showing of the history of the New Media Design major, through the use of projection screens leading through the exhibit and interactive installations to keep viewers engaged. My portion of the project involved creating an interactive installation to be displayed on projector screens and iMac displays. Due to current HTML5 video implementation inconsistencies, this application only supports recent versions of Chrome.</p>",
-      "finalThoughts": "<p>This was a challenging project from both a design perspective and a development perspective and I learned a lot!</p><p>I'd like to work some more on it in the future, and add scrubbing and icons, but also integrate Kinect interactivity so it can be used interactively on a tv or similar setups.</p>"
+      "finalThoughts": "<p>This was a challenging project from both a design perspective and a development perspective and I learned a lot!</p><p>I'd like to work some more on it in the future, and add scrubbing and icons, but also integrate Kinect interactivity so it can be used interactively on a tv or similar setups.</p>",
+      "slides": [
+        {
+          "colorScheme": "dark",
+          "title": "Design Process",
+          "subtitle": "Concept",
+          "content": "<p class=\"band\">I created a system that would work on a static display (like a TV), but also can be interacted with by mouse. The metadata is displayed for a few seconds on top of the video, and then fades out and the videos continue looping. If the mouse is moved, the overlay comes back and the user can navigate by clicks</p><div class=\"image-container\"><a class=\"lightbox\" href=\"img/mockups/vid-reel1.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"img/mockups/vid-reel1.jpg\" alt=\"overlay\" /></a><a class=\"lightbox\" href=\"img/mockups/vid-reel2.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"img/mockups/vid-reel2.jpg\" alt=\"looping\" /></a></div>"
+        },
+        {
+          "colorScheme": "light",
+          "title": "Development Cycle",
+          "subtitle": "Javascript Development",
+          "content": "<p class=\"band\">This project was a fun chance to learn a lot of new techniques and technology.</p>",
+          "timeline": [
+            {
+              "image": "vid-reel/browserify.jpg",
+              "title": "Browserify",
+              "description": "I used Browserify for dependency management and concatenation instead of AMD (requireJS)"
+            },
+            {
+              "image": "vid-reel/flexbox.jpg",
+              "title": "Flexbox",
+              "description": "The navigation development was simplified by use of flexbox layout"
+            },
+            {
+              "image": "vid-reel/firebase.jpg",
+              "title": "Firebase",
+              "description": "The video metadata and file locations are loaded from a JSON database on Firebase"
+            },
+            {
+              "image": "vid-reel/html5.jpg",
+              "title": "HTML5 Video",
+              "description": "The app functions with extensive use of the HTML5 video API"
+            }
+          ]
+        }
+      ]
     },
     "liveSite": "",
-    "repo": ""
+    "repo": "https://github.com/sarahbethfederman/Gallery-R"
   },
   {
     "title": "News to Live By",
