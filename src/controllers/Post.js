@@ -1,6 +1,7 @@
 var Post = require('../models/Post');
 
 var getAllPosts = function(req, res) {
+	// Sort posts by date, by newest first
 	Post.find({}).sort('-date').exec(function(err, results) {
 		if (err) {
 			console.log(err);

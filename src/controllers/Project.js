@@ -4,6 +4,7 @@ var async = require('async');
 var totalProjects;
 
 function projectCount(callback) {
+	// get total number of projects
 	Project.count({}, function(err, c) {
 		totalProjects = c;
 		
@@ -12,7 +13,9 @@ function projectCount(callback) {
 }
 
 var getAllProjects = function(req, res, mainContent) {
+	// Get projects and sort them by order property
 	Project.find({}).select('-content').sort('order').exec(function(err, results) {
+		// assign the results to the mainContent json
 		mainContent.projects = results;
 		res.render('index', mainContent);
 	});
@@ -33,15 +36,21 @@ var getProject = function(req, res) {
 
 function getNext(project, callback) {
 	var search;
+
+	// if its the last project
 	if (project.order >= totalProjects-1) {
+		// the next project is the first project
 		search = { order: 0 };
 	} else {
+		// else it's the next in order
 		search = { order: project.order + 1 };
 	}
 
+	// set the next property to the correct project slug
 	Project.findOne(search, 'slug', function(err, result) {
 		project.set('next', result.slug);
 
+		// pass the transformed current project to getPrev
 		callback(null, project);
 	});
 }
@@ -49,15 +58,20 @@ function getNext(project, callback) {
 function getPrev(project, callback) {
 	var search;
 
+	// if it's the first project
 	if (project.order <= 0) {
+		// the previous project is the last project
 		search = { order: totalProjects-1 };
 	} else {
+		// else its the one before it
 		search = { order: project.order -1 };
 	}
 
+	// set the prev property to the correct project slug
 	Project.findOne(search, 'slug', function(err, result) {
 		project.set('prev', result.slug);
 
+		// pass the transformed project with prev & next set to the final project
 		callback(null, project);
 	});
 }

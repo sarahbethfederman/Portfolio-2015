@@ -1,12 +1,34 @@
 [
   {
+    "title": "Steve Tularak Portfolio",
+    "subtitle": "Custom Wordpress Theme",
+    "description": "I worked with Steve to bring his portfolio vision to life with a custom theme",
+    "slug": "steve-tularak",
+    "backgroundImage": "",
+    "logo": "",
+    "order": 0,
+    "tags": [
+      "Time: 70 hours",
+      "Wordpress",
+      "HTML5",
+      "SCSS",
+      "jQuery",
+      "Freelance"
+    ],
+    "content": {
+      "description": "",
+      "finalThoughts": "",
+      "slides": []
+    }
+  },
+  {
     "title": "Chadder",
     "subtitle": "Website Reboot",
     "description": "I designed and developed a new responsive website for RIT-based startup Chadder",
     "slug": "chadder",
     "backgroundImage": "mockups/chadder1.jpg",
     "logo": "chadder/logo.svg",
-    "order": 0,
+    "order": 1,
     "tags": [
       "Time: 3 weeks",
       "UI/UX design",
@@ -64,7 +86,7 @@
     "description": "I developed a musical particle experience using HTML5 canvas and the web audio API",
     "slug": "particle",
     "backgroundImage": "mockups/particle3.jpg",
-    "order": 1,
+    "order": 2,
     "tags": [
       "Time: 3 weeks",
       "UI/UX design",
@@ -116,12 +138,28 @@
     "repo": "https://github.com/sarahbethfederman/interactive-particle-system"
   },
   {
+    "title": "Personal Portfolio",
+    "subtitle": "Dynamic MVC templating system",
+    "description": "Custom Node JS portfolio website (you're looking at it!)",
+    "slug": "portfolio",
+    "backgroundImage": "",
+    "order": 3,
+    "tags": [
+      "Time: 1 week",
+      "NodeJS",
+      "Express",
+      "Gulp",
+      "Handlebars",
+      "Heroku"
+    ]
+  },
+  {
     "title": "Gallery-R Reel",
     "subtitle": "Web Installation Experience",
     "description": "I created an HTML5 video immersion interface to display videos with metadata",
     "slug": "vid-reel",
     "backgroundImage": "mockups/vid-reel.jpg",
-    "order": 2,
+    "order": 4,
     "tags": [
       "Time: 3 weeks",
       "UI/UX design",
@@ -139,7 +177,7 @@
           "colorScheme": "dark",
           "title": "Design Process",
           "subtitle": "Concept",
-          "content": "<p class=\"band\">I created a system that would work on a static display (like a TV), but also can be interacted with by mouse. The metadata is displayed for a few seconds on top of the video, and then fades out and the videos continue looping. If the mouse is moved, the overlay comes back and the user can navigate by clicks</p><div class=\"image-container\"><a class=\"lightbox\" href=\"img/mockups/vid-reel1.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/mockups/vid-reel1.jpg\" alt=\"overlay\" /></a><a class=\"lightbox\" href=\"img/mockups/vid-reel2.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/mockups/vid-reel2.jpg\" alt=\"looping\" /></a></div>"
+          "content": "<p class=\"band\">I created a system that would work on a static display (like a TV), but also can be interacted with by mouse. The metadata is displayed for a few seconds on top of the video, and then fades out and the videos continue looping. If the mouse is moved, the overlay comes back and the user can navigate by clicks</p><div class=\"image-container\"><a class=\"lightbox\" href=\"img/mockups/vid-reel1.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"img/mockups/vid-reel1.jpg\" alt=\"overlay\" /></a><a class=\"lightbox\" href=\"img/mockups/vid-reel2.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"img/mockups/vid-reel2.jpg\" alt=\"looping\" /></a></div>"
         },
         {
           "colorScheme": "light",
@@ -180,7 +218,7 @@
     "description": "I developed a responsive wordpress theme for a news website during my internship at Lookthink",
     "slug": "ntlb",
     "backgroundImage": "mockups/ntlb1.jpg",
-    "order": 3,
+    "order": 5,
     "logo": "ntlb/logo.png",
     "tags": [
       "Role: Lead Developer",

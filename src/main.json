@@ -17,21 +17,25 @@
   	{
   		"name": "github",
   		"url": "http://www.github.com/sarahbethfederman",
+      "username": "sarahbethfederman",
   		"image": "github.svg"
   	},
   	{
   		"name": "twitter",
   		"url": "http://www.twitter.com/sarah_federman",
+      "username": "sarah_federman",
   		"image": "twitter.svg"
   	},
   	{
   		"name": "treehouse",
   		"url": "http://www.teamtreehouse.com/sarahfederman",
+      "username": "sarahfederman",
   		"image": "treehouse.svg"
   	},
   	{
   		"name": "dribbble",
   		"url": "http://www.teamtreehouse.com/sarahfederman",
+      "username": "sarahfederman",
   		"image": "dribbble.svg"
   	}
   ]

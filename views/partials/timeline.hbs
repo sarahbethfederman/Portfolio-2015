@@ -2,14 +2,6 @@
   <div class="spine"></div>
 
   {{#each timeline}}
-{{!--     {{#if @first}}
-      <div class="events-container">
-    {{/if}} --}}
-{{!-- 
-    {{#ifCond @index timeline.length half=true}}
-      </div>
-      <div class="events-container">
-    {{/ifCond}} --}}
       <div class="event">
         <div class="leg"></div>
         <div class="event-img">
@@ -20,10 +12,6 @@
           <p>{{this.description}}</p>
         </div>
       </div>
-
-{{!--     {{#if @last}}
-      </div>end event container
-    {{/if}} --}}
   {{/each}}
 
-</div>{{!-- end timeline--}}
+</div>

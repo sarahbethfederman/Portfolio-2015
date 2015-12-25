@@ -27,7 +27,8 @@
     "express-handlebars": "^2.0.1",
     "imgix-core-js": "^0.2.1",
     "mongoose": "^4.2.6",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "twitter-node-client": "0.0.6"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
