@@ -21,9 +21,6 @@ var db = mongoose.connect(dbURL, function(err) {
 var port = process.env.PORT || process.env.NODE_PORT || 3000;
 var env = process.env.NODE_ENV || 'development';
 
-// Set up favicon
-//app.use(favicon(__dirname + '/../public/img/favicon.png'));
-
 // Use compression
 app.use(compression());
 
