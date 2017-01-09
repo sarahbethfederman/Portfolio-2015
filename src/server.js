@@ -31,8 +31,6 @@ app.use(express.static(path.resolve(__dirname + '/../public')));
 var client = new ImgixClient("sarahfederman.imgix.net", "UucTkLWkcRgKy2SZMYe5aHHfXo40bB3Q"); 
 
 // Set up handlebars (views)
-console.log(__dirname);
-console.log(path.resolve(__dirname + '/../views'));
 app.set('views', path.resolve(__dirname + '/../views'));
 
 var hbs = exphbs.create({

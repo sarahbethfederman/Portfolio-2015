@@ -48,6 +48,8 @@ function getNext(project, callback) {
 
 	// set the next property to the correct project slug
 	Project.findOne(search, 'slug', function(err, result) {
+    if (err) console.log(err);
+    
 		project.set('next', result.slug);
 
 		// pass the transformed current project to getPrev
