@@ -26,7 +26,7 @@ var getProject = function(req, res) {
 
 	Project.findBySlug(req.params.slug, function(err, project) {
 		projectCount(function() {
-      res.render('project', result);
+      res.render('project', project);
 			// // once we have the count saved
 			// composeRefs(project, function(err, result) {
 				
