@@ -4,7 +4,6 @@ var mainContent = require('./main.json');
 
 var router = function(app) {
 
-	// TODO: Switch this to grab project from DB
 	app.get('/projects/:slug', Project.getProject);
 
 	app.get('/blog', Post.getAllPosts);
