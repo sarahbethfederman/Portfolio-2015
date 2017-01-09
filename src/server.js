@@ -25,7 +25,7 @@ var env = process.env.NODE_ENV || 'development';
 app.use(compression());
 
 // Set up static assets
-app.use(express.static(path.resolve(__dirname + '../../public'))); 
+app.use(express.static(path.resolve(__dirname + '../public'))); 
 
 // Set up imgix
 var client = new ImgixClient("sarahfederman.imgix.net", "UucTkLWkcRgKy2SZMYe5aHHfXo40bB3Q"); 
