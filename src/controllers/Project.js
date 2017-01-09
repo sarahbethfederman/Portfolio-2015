@@ -26,10 +26,11 @@ var getProject = function(req, res) {
 
 	Project.findBySlug(req.params.slug, function(err, project) {
 		projectCount(function() {
-			// once we have the count saved
-			composeRefs(project, function(err, result) {
-				res.render('project', result);
-			});
+      res.render('project', result);
+			// // once we have the count saved
+			// composeRefs(project, function(err, result) {
+				
+			// });
 		});
 	});
 };
@@ -49,7 +50,7 @@ function getNext(project, callback) {
 	// set the next property to the correct project slug
 	Project.findOne(search, 'slug', function(err, result) {
     if (err) console.log(err);
-    
+
 		project.set('next', result.slug);
 
 		// pass the transformed current project to getPrev
