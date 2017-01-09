@@ -33,7 +33,7 @@ var client = new ImgixClient("sarahfederman.imgix.net", "UucTkLWkcRgKy2SZMYe5aHH
 // Set up handlebars (views)
 console.log(__dirname);
 console.log(path.resolve(__dirname + '/../../views'));
-app.set('views', path.resolve(__dirname + '../../views'));
+app.set('views', path.resolve(__dirname + '/../../views'));
 
 var hbs = exphbs.create({
 	defaultLayout: 'main',
