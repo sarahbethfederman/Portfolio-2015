@@ -112,67 +112,8 @@
         }
       ]
     },
-    "liveSite": "",
+    "liveSite": "https://s3-us-west-1.amazonaws.com/js-particle/index.html",
     "repo": "https://github.com/sarahbethfederman/interactive-particle-system"
-  },
-  {
-    "title": "Gallery-R Reel",
-    "subtitle": "Web Installation Experience",
-    "description": "I created an HTML5 video immersion interface to display videos with metadata",
-    "slug": "vid-reel",
-    "backgroundImage": "mockups/vid-reel.jpg",
-    "order": 2,
-    "tags": [
-      "Time: 3 weeks",
-      "UI/UX design",
-      "Concept/Strategy",
-      "HTML5",
-      "Javascript",
-      "SCSS"
-    ],
-    "content": {
-      "backgroundImage": "mockups/vid-reel1.jpg",
-      "description": "<p>The Gallery R exhibit is a visual showing of the history of the New Media Design major, through the use of projection screens leading through the exhibit and interactive installations to keep viewers engaged. My portion of the project involved creating an interactive installation to be displayed on projector screens and iMac displays. Due to current HTML5 video implementation inconsistencies, this application only supports recent versions of Chrome.</p>",
-      "finalThoughts": "<p>This was a challenging project from both a design perspective and a development perspective and I learned a lot!</p><p>I'd like to work some more on it in the future, and add scrubbing and icons, but also integrate Kinect interactivity so it can be used interactively on a tv or similar setups.</p>",
-      "slides": [
-        {
-          "colorScheme": "dark",
-          "title": "Design Process",
-          "subtitle": "Concept",
-          "content": "<p class=\"band\">I created a system that would work on a static display (like a TV), but also can be interacted with by mouse. The metadata is displayed for a few seconds on top of the video, and then fades out and the videos continue looping. If the mouse is moved, the overlay comes back and the user can navigate by clicks</p><div class=\"image-container\"><a class=\"lightbox\" href=\"img/mockups/vid-reel1.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/mockups/vid-reel1.jpg\" alt=\"overlay\" /></a><a class=\"lightbox\" href=\"img/mockups/vid-reel2.jpg\" rel=\"vid-reel\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/mockups/vid-reel2.jpg\" alt=\"looping\" /></a></div>"
-        },
-        {
-          "colorScheme": "light",
-          "title": "Development Cycle",
-          "subtitle": "Javascript Development",
-          "content": "<p class=\"band\">This project was a fun chance to learn a lot of new techniques and technology.</p>",
-          "timeline": [
-            {
-              "image": "vid-reel/browserify.jpg",
-              "title": "Browserify",
-              "description": "I used Browserify for dependency management and concatenation instead of AMD (requireJS)"
-            },
-            {
-              "image": "vid-reel/flexbox.jpg",
-              "title": "Flexbox",
-              "description": "The navigation development was simplified by use of flexbox layout"
-            },
-            {
-              "image": "vid-reel/firebase.jpg",
-              "title": "Firebase",
-              "description": "The video metadata and file locations are loaded from a JSON database on Firebase"
-            },
-            {
-              "image": "vid-reel/html5.jpg",
-              "title": "HTML5 Video",
-              "description": "The app functions with extensive use of the HTML5 video API"
-            }
-          ]
-        }
-      ]
-    },
-    "liveSite": "",
-    "repo": "https://github.com/sarahbethfederman/Gallery-R"
   },
   {
     "title": "News to Live By",

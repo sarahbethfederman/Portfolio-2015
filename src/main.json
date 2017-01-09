@@ -1,7 +1,7 @@
 {
 	"name": "Sarah Federman",
-  "title": "Creative Web Developer",
-  "about": "Hey! I'm a 4th year creative web developer and New Media Design major at Rochester Institute of Technology. I use cutting-edge technology to design &amp; develop usable applications and interactive experiences. I'm passionate about design &amp; development and I live to learn constantly. My focus is on frontend engineering, but I often hop the fence and work on visual design and UX or do some backend development. I'm currently finishing up my BFA this fall, and then starting a full-time role as a Web Developer at LinkedIn in January. <em>Not currently accepting new clients.</em>",
+  "title": "Creative UI Engineer",
+  "about": "I love working in the sweet spot between design and code. I use cutting-edge technology to design &amp; develop usable applications and interactive experiences. I'm passionate about design &amp; development and I live to learn constantly. My focus is on frontend engineering, but I often hop the fence and work on visual design and UX or do some backend development. I have previously worked with Adobe and LinkedIn and I'm currently looking for my next new challenge! Let's work together!",
   "profilePic": "http://www.gravatar.com/avatar/148c50692de4bba666cf835cca5aacf3",
   "social": [
     {
@@ -34,7 +34,7 @@
   	},
   	{
   		"name": "dribbble",
-  		"url": "http://www.teamtreehouse.com/sarahfederman",
+  		"url": "https://dribbble.com/sarah_federman",
       "username": "sarahfederman",
   		"image": "dribbble.svg"
   	}
