@@ -29,11 +29,15 @@ var getProject = function(req, res) {
     res.render('project', project);
 
     Project.findOne({_id: {$lt: project._id}}).sort({_id: -1}).exec(function(err, result) {
-      project.set('previous', result.slug);
+      if (result) {
+        project.set('previous', result.slug);
+      }
     });
 
     Project.findOne({_id: {$gt: project._id}}).sort({_id: 1}).exec(function(err, result) {
-      project.set('next', result.slug);
+      if (result) {
+        project.set('next', result.slug);
+      }
     });
   
 		// projectCount(function() {
