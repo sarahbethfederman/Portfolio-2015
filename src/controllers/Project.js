@@ -25,8 +25,7 @@ var getAllProjects = function(req, res, mainContent) {
 var getProject = function(req, res) {
 	//var composeRefs = async.compose(getNext, getPrev);
 
-	Project.findBySlug(req.params.slug, function(err, project) {
-    console.log(project.next());
+	var cursor = Project.findBySlug(req.params.slug, function(err, project) {
     res.render('project', project);
 
 		// projectCount(function() {
@@ -37,6 +36,10 @@ var getProject = function(req, res) {
 			// });
 		// });
 	});
+
+  cursor.next(function(err, doc) {
+    console.log(doc.title);
+  });
 };
 
 
