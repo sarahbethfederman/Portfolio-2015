@@ -23,10 +23,12 @@ var getAllProjects = function(req, res, mainContent) {
 };
 
 var getProject = function(req, res) {
-	var composeRefs = async.compose(getNext, getPrev);
+	//var composeRefs = async.compose(getNext, getPrev);
 
 	Project.findBySlug(req.params.slug, function(err, project) {
+    project.set('next', project.next());
     res.render('project', project);
+
 		// projectCount(function() {
       
 			// // once we have the count saved
@@ -36,6 +38,7 @@ var getProject = function(req, res) {
 		// });
 	});
 };
+
 
 function getNext(project, callback) {
 	var search;
