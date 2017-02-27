@@ -26,7 +26,7 @@ var getProject = function(req, res) {
 	//var composeRefs = async.compose(getNext, getPrev);
 
 	Project.findBySlug(req.params.slug, function(err, project) {
-    project.set('next', project.next());
+    console.log(project.next());
     res.render('project', project);
 
 		// projectCount(function() {
