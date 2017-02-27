@@ -7,7 +7,7 @@ function projectCount(callback) {
 	// get total number of projects
 	Project.count({}, function(err, c) {
 		totalProjects = c;
-		
+
 		return totalProjects;
 	});
   return totalProjects;
@@ -26,13 +26,14 @@ var getProject = function(req, res) {
 	var composeRefs = async.compose(getNext, getPrev);
 
 	Project.findBySlug(req.params.slug, function(err, project) {
-		projectCount(function() {
-      res.render('project', project);
+    res.render('project', project);
+		// projectCount(function() {
+      
 			// // once we have the count saved
 			// composeRefs(project, function(err, result) {
 				
 			// });
-		});
+		// });
 	});
 };
 
