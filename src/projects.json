@@ -17,7 +17,7 @@
     ],
     "content": {
       "description": "<p>Chadder is an RIT-based startup. They created an end-to-end encrypted private messaging mobile application. In need of a site redesign, they approached me with the project.I designed the website for my GUI course project and continued on to develop the site on my own, until I helped officially launch the app at CES 2015 in Las Vegas. Utilizing a responsive approach, the site's main function is to increase app downloads. Currently featured on <a class=\"red\"  href=\"http://www.producthunt.com/posts/chadder\" target=\"_blank\">Product Hunt</a>!</p>",
-      "finalThoughts": "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>",
+      "finalThoughts": "<p>This was such a rewarding project! I learned about startups, got to pitch users and press in Vegas at CES, and got to do the design and development of the whole project.</p><p>If I could go back, I would implement a different image for the final slide and it seems to stock image-y.</p>",
       "slides": [
         {
           "colorScheme": "dark",

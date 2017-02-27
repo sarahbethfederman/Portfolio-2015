@@ -8,8 +8,9 @@ function projectCount(callback) {
 	Project.count({}, function(err, c) {
 		totalProjects = c;
 		
-		callback(c);
+		return totalProjects;
 	});
+  return totalProjects;
 }
 
 var getAllProjects = function(req, res, mainContent) {
