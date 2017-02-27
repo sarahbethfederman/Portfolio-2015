@@ -27,6 +27,9 @@ var getProject = function(req, res) {
 
 	Project.findBySlug(req.params.slug, function(err, project) {
     res.render('project', project);
+    console.log(project._id);
+    console.log(project.id);
+    console.log(project);
 
     Project.findOne({_id: {$lt: project._id}}).sort({_id: -1}).exec(function(err, result) {
       if (result) {
