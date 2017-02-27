@@ -27,12 +27,14 @@ var getProject = function(req, res) {
 
 	Project.findBySlug(req.params.slug, function(err, project) {
     Project.findOne({_id: {$lt: project._id}}).sort({_id: -1}).exec(function(err, result) {
+      if (err) { throw err; }
       if (result) {
         project.set('previous', result.slug);
       }
     });
 
     Project.findOne({_id: {$gt: project._id}}).sort({_id: 1}).exec(function(err, result) {
+      if (err) { throw err; }
       if (result) {
         project.set('next', result.slug);
       }
