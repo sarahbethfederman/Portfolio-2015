@@ -32,7 +32,7 @@ var getProject = function(req, res) {
       project.set('previous', result);
     });
 
-    Post.findOne({_id: {$gt: project._id}}).sort({_id: 1}).exec(function(err, result) {
+    Project.findOne({_id: {$gt: project._id}}).sort({_id: 1}).exec(function(err, result) {
       project.set('next', result);
     });
   
