@@ -127,8 +127,8 @@
     "backgroundImage": "mockups/spruce.jpg",
     "logo": "spruce/logo.png",
     "order": 2,
-    "next": "particle",
-    "prev": "ntlb",
+    "next": "ntlb",
+    "prev": "particle",
     "tags": [
       "Time: 34 hours",
       "Contract",
