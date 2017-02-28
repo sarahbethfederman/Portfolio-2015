@@ -124,8 +124,8 @@
     "subtitle": "Blog Reboot",
     "description": "I developed a custom responsive Wordpress theme for Google Venture-backed startup Spruce Health",
     "slug": "spruce-health",
-    "backgroundImage": "mockups/chadder1.jpg",
-    "logo": "http://blog.sprucehealth.com/wp-content/themes/spruce-health/images/ad_logo.png",
+    "backgroundImage": "mockups/spruce.jpg",
+    "logo": "spruce/logo.png",
     "order": 2,
     "next": "particle",
     "prev": "ntlb",
@@ -163,17 +163,17 @@
             {
               "image": "chadder/comp-small.jpg",
               "title": "Desktop version",
-              "description": "I started with the desktop version where I would normally start with mobile, because Genesis's starter css worked this way and it was cheaper to use that as a starting point."
+              "description": "I started with the desktop version where I would normally start with mobile, because Genesis's starter css worked this way and it was cheaper to use that as a starting point"
             },
             {
               "image": "chadder/overlay-small.jpg",
               "title": "Custom Ad Post Type",
-              "description": "I created a custom post type with 3 different template options where Spruce using the Advanced Custom Fields plugin"
+              "description": "I created a custom post type with 3 different template options using the Advanced Custom Fields plugin"
             },
            {
               "image": "chadder/overlay-small.jpg",
               "title": "MailChimp integration",
-              "description": "I added inputs that connected to "
+              "description": "I added inputs that connected to Spruce's MailChimp email subscriber list"
             },
             {
               "image": "chadder/mobile.jpg",
