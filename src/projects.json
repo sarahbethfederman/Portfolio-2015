@@ -7,6 +7,8 @@
     "backgroundImage": "mockups/chadder1.jpg",
     "logo": "chadder/logo.svg",
     "order": 0,
+    "next": "particle",
+    "prev": "ntlb",
     "tags": [
       "Time: 3 weeks",
       "UI/UX design",
@@ -65,6 +67,8 @@
     "slug": "particle",
     "backgroundImage": "mockups/particle3.jpg",
     "order": 1,
+    "next": "spruce-health",
+    "prev": "chadder",
     "tags": [
       "Time: 3 weeks",
       "UI/UX design",
@@ -122,7 +126,9 @@
     "slug": "spruce-health",
     "backgroundImage": "mockups/chadder1.jpg",
     "logo": "http://blog.sprucehealth.com/wp-content/themes/spruce-health/images/ad_logo.png",
-    "order": 0,
+    "order": 2,
+    "next": "particle",
+    "prev": "ntlb",
     "tags": [
       "Time: 34 hours",
       "Contract",
@@ -188,6 +194,8 @@
     "slug": "ntlb",
     "backgroundImage": "mockups/ntlb1.jpg",
     "order": 3,
+    "next": "chadder",
+    "prev": "spruce-health",
     "logo": "ntlb/logo.png",
     "tags": [
       "Role: Lead Developer",
