@@ -116,6 +116,72 @@
     "repo": "https://github.com/sarahbethfederman/interactive-particle-system"
   },
   {
+    "title": "Spruce Health",
+    "subtitle": "Blog Reboot",
+    "description": "I developed a custom responsive Wordpress theme for Google Venture-backed startup Spruce Health",
+    "slug": "spruce-health",
+    "backgroundImage": "mockups/chadder1.jpg",
+    "logo": "http://blog.sprucehealth.com/wp-content/themes/spruce-health/images/ad_logo.png",
+    "order": 0,
+    "tags": [
+      "Time: 34 hours",
+      "Contract",
+      "Wordpress",
+      "Genesis",
+      "PHP",
+      "HTML5",
+      "jQuery",
+      "SCSS"
+    ],
+    "content": {
+      "description": "<p>I developed a custom Wordpress theme for SF-based startup Spruce Health. They are KPCB and Google Ventures-baced and focus on telemedine and doctor/patient communication. I worked with their designer on getting a pixel perfect responsive experience for their readers.</p>",
+      "finalThoughts": "<p>This was a really fun project and a great break from the complex web app development at scale I was doing at LinkedIn. It wasn't extremely technically challenging, but I think the experience is very polished and the client was really happy with it. Sometimes it's good to get back to your roots and get something on the page looking great!</p>",
+      "slides": [
+        {
+          "colorScheme": "dark",
+          "title": "Design Process",
+          "subtitle": "Handoff",
+          "content": "<p class=\"band\">I worked with Spruce Health's designer (and my former classmate!) Kaleigh, who sent me her mockups for mobile, tablet, and desktop. We chatted over the phone to clarify what I had questions about and continued via Slack whenever we needed to follow up.</p><div class=\"image-container\"><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" rel=\"chadder\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" alt=\"final design\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" rel=\"chadder\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" alt=\"overlay\" /></a></div>"
+        },
+        {
+          "colorScheme": "light",
+          "title": "Development Cycle",
+          "subtitle": "Front-end Development",
+          "content": "<p class=\"band\">I used the Genesis framework as a starting point so I could iterate quickly</p>",
+          "timeline": [
+            {
+              "image": "chadder/comp-match.jpg",
+              "title": "Comp Matching",
+              "description": "I used the Sketch files to quickly get critical information about colors, dimensions, etc."
+            },
+            {
+              "image": "chadder/comp-small.jpg",
+              "title": "Desktop version",
+              "description": "I started with the desktop version where I would normally start with mobile, because Genesis's starter css worked this way and it was cheaper to use that as a starting point."
+            },
+            {
+              "image": "chadder/overlay-small.jpg",
+              "title": "Custom Ad Post Type",
+              "description": "I created a custom post type with 3 different template options where Spruce using the Advanced Custom Fields plugin"
+            },
+           {
+              "image": "chadder/overlay-small.jpg",
+              "title": "MailChimp integration",
+              "description": "I added inputs that connected to "
+            },
+            {
+              "image": "chadder/mobile.jpg",
+              "title": "Mobile and Table Responsive",
+              "description": "With the help of some media query adjustments, the mobile and tablet versions came to life"
+            }
+          ]
+        }
+      ]
+    },
+    "liveSite": "blog.sprucehealth.com",
+    "repo": "https://bitbucket.org/sarahbethfederman/spruce-health"
+  },
+  {
     "title": "News to Live By",
     "subtitle": "Custom Wordpress Theme",
     "description": "I developed a responsive wordpress theme for a news website during my internship at Lookthink",
