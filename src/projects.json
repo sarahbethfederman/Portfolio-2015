@@ -156,7 +156,7 @@
           "content": "<p class=\"band\">I used the Genesis framework as a starting point so I could iterate quickly</p>",
           "timeline": [
             {
-              "image": "chadder/comp-match.jpg",
+              "image": "spruce/sketch.png",
               "title": "Comp Matching",
               "description": "I used the Sketch files to quickly get critical information about colors, dimensions, etc."
             },
@@ -171,7 +171,7 @@
               "description": "I created a custom post type with 3 different template options using the Advanced Custom Fields plugin"
             },
            {
-              "image": "chadder/overlay-small.jpg",
+              "image": "spruce/mailchimp.png",
               "title": "MailChimp integration",
               "description": "I added inputs that connected to Spruce's MailChimp email subscriber list"
             },
@@ -184,7 +184,7 @@
         }
       ]
     },
-    "liveSite": "blog.sprucehealth.com",
+    "liveSite": "http://blog.sprucehealth.com/",
     "repo": "https://bitbucket.org/sarahbethfederman/spruce-health"
   },
   {
