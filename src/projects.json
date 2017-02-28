@@ -79,7 +79,7 @@
     "content": {
       "backgroundImage": "mockups/particle.png",
       "description": "<p>For my Rich Media Web Application Development I class, our first project was a HTML5 canvas project. I chose to create a experimental experience using particle systems and the web audio API. This was a chance for me to get into the nitty gritty of object-oriented javascript and prototypal inheritance.</p>",
-      "finalThoughts": "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>",
+      "finalThoughts": "<p>I learned so much from this project! This was the first pure js-driven application I've written. I learned a lot about Canvas, object-oriented vanilla javascript, AMD, and designing an application structure.</p><p>The interface is lacking, however, though functional. I may try to provide a nicer UI when I have some extra time. I'd also like to include a beat detection library and do more with the Web Audio API.</p>",
       "slides": [
         {
           "colorScheme": "dark",
@@ -141,13 +141,13 @@
     ],
     "content": {
       "description": "<p>I developed a custom Wordpress theme for SF-based startup Spruce Health. They are KPCB and Google Ventures-baced and focus on telemedine and doctor/patient communication. I worked with their designer on getting a pixel perfect responsive experience for their readers.</p>",
-      "finalThoughts": "<p>This was a really fun project and a great break from the complex web app development at scale I was doing at LinkedIn. It wasn't extremely technically challenging, but I think the experience is very polished and the client was really happy with it. Sometimes it's good to get back to your roots and get something on the page looking great!</p>",
+      "finalThoughts": "<p>This was a really fun project and a great break from the complex web app development at scale I was working on at LinkedIn. It wasn't extremely technically challenging, but I think the experience is very polished and the client was really happy with it. Sometimes it's good to get back to your roots and get something on the page looking great!</p>",
       "slides": [
         {
           "colorScheme": "dark",
           "title": "Design Process",
-          "subtitle": "Handoff",
-          "content": "<p class=\"band\">I worked with Spruce Health's designer (and my former classmate!) Kaleigh, who sent me her mockups for mobile, tablet, and desktop. We chatted over the phone to clarify what I had questions about and continued via Slack whenever we needed to follow up.</p><div class=\"image-container\"><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" rel=\"chadder\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" alt=\"final design\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" rel=\"chadder\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" alt=\"overlay\" /></a></div>"
+          "subtitle": "The handoff",
+          "content": "<p class=\"band\">I worked with Spruce Health's designer (and my former classmate!) Kaleigh, who sent me her mockups for mobile, tablet, and desktop. We chatted over the phone to clarify what I had questions about and continued via Slack whenever we needed to follow up.</p><div class=\"image-container\"><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Homepage.png\" rel=\"spruce\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Homepage.png\" alt=\"homepage\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Article.png\" rel=\"spruce\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Article.png\" alt=\"article\" /></a></div>"
         },
         {
           "colorScheme": "light",
@@ -161,12 +161,12 @@
               "description": "I used the Sketch files to quickly get critical information about colors, dimensions, etc."
             },
             {
-              "image": "chadder/comp-small.jpg",
+              "image": "spruce/desktop.jpg",
               "title": "Desktop version",
               "description": "I started with the desktop version where I would normally start with mobile, because Genesis's starter css worked this way and it was cheaper to use that as a starting point"
             },
             {
-              "image": "chadder/overlay-small.jpg",
+              "image": "spruce/ad.png",
               "title": "Custom Ad Post Type",
               "description": "I created a custom post type with 3 different template options using the Advanced Custom Fields plugin"
             },
