@@ -12,4 +12,7 @@
   a {
     font-weight: 700;
   }
+  @media($tablet) {
+    left: 0;
+  }
 }

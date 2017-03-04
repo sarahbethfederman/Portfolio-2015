@@ -180,6 +180,9 @@ h3 {
 
 .half {
   @include span-columns(6);
+  @media($tablet) {
+    @include span-columns(12);
+  }
 }
 
 .image-container {

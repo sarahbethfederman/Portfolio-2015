@@ -18,7 +18,7 @@
       "SCSS"
     ],
     "content": {
-      "description": "<p>Chadder is an RIT-based startup. They created an end-to-end encrypted private messaging mobile application. In need of a site redesign, they approached me with the project.I designed the website for my GUI course project and continued on to develop the site on my own, until I helped officially launch the app at CES 2015 in Las Vegas. Utilizing a responsive approach, the site's main function is to increase app downloads. Currently featured on <a class=\"red\"  href=\"http://www.producthunt.com/posts/chadder\" target=\"_blank\">Product Hunt</a>!</p>",
+      "description": "<p>Chadder is an RIT-based startup. They created an end-to-end encrypted private messaging mobile application. In need of a site redesign, they approached me with the project. I designed the website for my GUI course project and continued on to develop the site on my own, until I helped officially launch the app at CES 2015 in Las Vegas. Utilizing a responsive approach, the site's main function is to increase app downloads. Currently featured on <a class=\"red\"  href=\"http://www.producthunt.com/posts/chadder\" target=\"_blank\">Product Hunt</a>!</p>",
       "finalThoughts": "<p>This was such a rewarding project! I learned about startups, got to pitch users and press in Vegas at CES, and got to do the design and development of the whole project.</p><p>If I could go back, I would implement a different image for the final slide and it seems to stock image-y.</p>",
       "slides": [
         {
@@ -31,7 +31,7 @@
           "colorScheme": "light",
           "title": "Development Cycle",
           "subtitle": "Front-end Development",
-          "content": "<p class=\"band\">This was a bit of a sprint, since we only had about a week to prepare in between final exams and leaving for CES.Because of this, I had to nix some of the extra effects I'd intended, like parallax scrolling.</p>",
+          "content": "<p class=\"band\">This was a bit of a sprint, since we only had about a week to prepare in between final exams and leaving for CES. Because of this, I had to nix some of the extra effects I'd intended, like parallax scrolling.</p>",
           "timeline": [
             {
               "image": "chadder/comp-match.jpg",
