@@ -191,9 +191,10 @@ h3 {
 }
 
 .image-container {
-  max-height: 60vh;
   overflow: hidden;
-  margin-bottom: rem(80);
+  img {
+    max-height: 80vh;
+  }
 }
 
 hr {

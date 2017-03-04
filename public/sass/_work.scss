@@ -76,6 +76,7 @@
     @include media($tablet) {
       @include span-columns(12);
       margin: 0;
+      padding: 0;
     }
     .button {
       margin: rem(10) rem(10);
