@@ -137,7 +137,7 @@
     }
 
     // Init blogBox
-    getWPpost("https://public-api.wordpress.com/rest/v1.1/sites/sarahbethfederman.com%2Fblog/posts/?number=1", $blogBox);
+    //getWPpost("https://public-api.wordpress.com/rest/v1.1/sites/sarahbethfederman.com%2Fblog/posts/?number=1", $blogBox);
 
     // Init Fancybox
     $lightBox = $('.lightbox');
