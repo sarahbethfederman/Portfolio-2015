@@ -1,6 +1,6 @@
 .announcement {
   position: fixed;
-  width: 100%;
+  width: calc(100% - 5rem);
   z-index: 200;
   top: 0;
   left: rem(80);
@@ -13,5 +13,6 @@
   }
   @include media($tablet) {
     left: 0;
+    width: 100%;
   }
 }

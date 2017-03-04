@@ -190,10 +190,11 @@ h3 {
   }
 }
 
-.image-container {
-  a {
-    max-height: 80vh;
-    overflow: hidden;
+.lightbox {
+  max-height: 80vh;
+  overflow: hidden;
+  img {
+    width: 100%;
   }
 }
 
