@@ -72,10 +72,11 @@
     margin-top: 0;
   }
   .right-col {
-    @include span-columns(4);
-    @include shift(1);
-    text-align: center;
     padding-top: rem(40);
+    @include media($tablet) {
+      @include span-columns(12);
+      margin: 0;
+    }
     .button {
       margin: rem(10) rem(10);
       width: rem(140);
