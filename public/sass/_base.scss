@@ -171,10 +171,16 @@ h3 {
   @include span-columns(4);
   @include shift(1);
   text-align: center;
+  @include media($tablet) {
+    @include span-columns(12);
+  }
 }
 
 .left-col {
   @include span-columns(7);
+  @include media($tablet) {
+    @include span-columns(12);
+  }
 }
 
 .half {
