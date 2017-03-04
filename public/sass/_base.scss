@@ -179,7 +179,7 @@ h3 {
 
 .half {
   @include span-columns(6);
-  @media($tablet) {
+  @include media($tablet) {
     @include span-columns(12);
   }
 }
