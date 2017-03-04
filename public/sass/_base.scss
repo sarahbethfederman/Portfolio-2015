@@ -216,6 +216,10 @@ hr {
   font-size: rem(22);
   font-style: italic;
   font-weight: 100;
+  @include media(max-width $break-1) {
+    font-size: rem(18);
+    width: 100%;
+  }
 }
 
 .dark {
