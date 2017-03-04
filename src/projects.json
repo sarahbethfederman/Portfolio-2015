@@ -25,7 +25,7 @@
           "colorScheme": "dark",
           "title": "Design Process",
           "subtitle": "Initial Iteration",
-          "content": "<p class=\"band\">Upon reflection, I decided that I wasn't invoking the emotional response necessary for a security-focused application. With some copy changes and some bolder colors and imagery, I came to a final solution.</p><div class=\"image-container\"><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" rel=\"chadder\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" alt=\"final design\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" rel=\"chadder\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" alt=\"overlay\" /></a></div>"
+          "content": "<p class=\"band\">Upon reflection, I decided that I wasn't invoking the emotional response necessary for a security-focused application. With some copy changes and some bolder colors and imagery, I came to a final solution.</p><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" rel=\"chadder\" class=\"half lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/mockup2.jpg\" alt=\"final design\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" rel=\"chadder\" class=\"half lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/chadder/overlay.jpg\" alt=\"overlay\" /></a>"
         },
         {
           "colorScheme": "light",
@@ -147,7 +147,7 @@
           "colorScheme": "dark",
           "title": "Design Process",
           "subtitle": "The handoff",
-          "content": "<p class=\"band\">I worked with Spruce Health's designer (and my former classmate!) Kaleigh, who sent me her mockups for mobile, tablet, and desktop. We chatted over the phone to clarify what I had questions about and continued via Slack whenever we needed to follow up.</p><div class=\"image-container\"><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Homepage.png\" rel=\"spruce\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Homepage.png\" alt=\"homepage\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Article.png\" rel=\"spruce\" class=\"lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Article.png\" alt=\"article\" /></a></div>"
+          "content": "<p class=\"band\">I worked with Spruce Health's designer (and my former classmate!) Kaleigh, who sent me her mockups for mobile, tablet, and desktop. We chatted over the phone to clarify what I had questions about and continued via Slack whenever we needed to follow up.</p><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Homepage.png\" rel=\"spruce\" class=\"half lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Homepage.png\" alt=\"homepage\" /></a><a href=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Article.png\" rel=\"spruce\" class=\"half lightbox\"><img class=\"half\" src=\"https://s3.amazonaws.com/sarahfederman-portfolio/spruce/Article.png\" alt=\"article\" /></a>"
         },
         {
           "colorScheme": "light",

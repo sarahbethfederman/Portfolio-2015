@@ -191,9 +191,9 @@ h3 {
 }
 
 .image-container {
-  overflow: hidden;
-  img {
+  a {
     max-height: 80vh;
+    overflow: hidden;
   }
 }
 
