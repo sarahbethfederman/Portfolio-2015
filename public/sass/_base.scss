@@ -92,7 +92,6 @@ h3 {
   @include media(max-width $break-1) {
     height: 50vh;
     background-color: #000;
-    background-image: url('img/bg.png');
     background-position: center;
     border: 0;
   }
